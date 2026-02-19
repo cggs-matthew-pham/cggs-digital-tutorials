@@ -24,7 +24,7 @@
    - **Size**: 36, centered
 3. Position at top of layout
 
-![[Screenshot - Title]]
+![ValuesTitleAnimation.gif](https://raw.githubusercontent.com/cggs-matthew-pham/cggs-digital-tutorials/refs/heads/main/ValuesTitleAnimation.gif)
 
 ---
 
@@ -33,10 +33,11 @@
 2. Properties:
    - **Name**: TextInstructions
    - **Text**: "Which value did you demonstrate today?"
-   - **Size**: 24, centered
+   - **Size**: 18, centered
 3. Position below title
 
-![[Screenshot - Instructions]]
+<img width="329" height="115" alt="image" src="https://github.com/user-attachments/assets/8a0de1c6-19b2-4d02-9160-fc0850613767" />
+
 
 ---
 
@@ -45,20 +46,24 @@ Insert 4 **Sprite** objects for each core value:
 
 **Sprite 1:**
 - **Name**: SpriteRespect
-- Draw or import sticker design for Respect
-- Position in a row
+<img width="445" height="397" alt="image" src="https://github.com/user-attachments/assets/f21b889a-71d7-4a9a-8fe1-4aaa86e15f0c" />
+
+
 
 **Sprite 2:**
 - **Name**: SpriteIntegrity
-- Draw or import sticker design for Integrity
+<img width="298" height="221" alt="image" src="https://github.com/user-attachments/assets/3b10e487-57de-48e7-b349-041128ab1be4" />
+
 
 **Sprite 3:**
 - **Name**: SpriteInclusion
-- Draw or import sticker design for Inclusion
+<img width="412" height="409" alt="image" src="https://github.com/user-attachments/assets/490614ef-bd36-4614-bacd-32cf538bd3da" />
+
 
 **Sprite 4:**
 - **Name**: SpriteCourage
-- Draw or import sticker design for Courage
+<img width="378" height="399" alt="image" src="https://github.com/user-attachments/assets/70a44180-a13f-425d-a81f-5d32ddda4c79" />
+
 
 ![[Screenshot - Value Stickers]]
 
