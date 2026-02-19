@@ -35,7 +35,7 @@
    - **Text**: "Which value did you demonstrate today?"
    - **Size**: 18, centered
 3. Position below title
-4. It should look like:
+It should look like:
 
 <img width="329" height="115" alt="image" src="https://github.com/user-attachments/assets/8a0de1c6-19b2-4d02-9160-fc0850613767" />
 
@@ -88,7 +88,7 @@ Add text buttons below each sprite to make the values clear:
      - **Name**: ButtonCourage
      - **Text**: "Courage"
 4. Position all buttons in a row below their corresponding sprites
-5. It should look like:
+It should look like:
 
 <img width="471" height="254" alt="image" src="https://github.com/user-attachments/assets/2f06dff6-5d29-44ed-91c4-4ca1c6334128" />
 
@@ -106,7 +106,7 @@ The array will contain a list of journal logs in the format: _[value]: [descript
    - **Name**: CurrentValue
    - **Type**: Text
    - **Initial value**: "" (empty)
-4. It should look like:
+It should look like:
    <img width="255" height="33" alt="image" src="https://github.com/user-attachments/assets/857eb91b-9432-40f7-8a70-8bd4db76d607" />
 
 ---
@@ -133,7 +133,7 @@ The array will contain a list of journal logs in the format: _[value]: [descript
    - Value: **"Integrity"**
 3. Add action → **System** → **Go to layout**
    - Layout: **Layout 2**
-4. It should look like:
+It should look like:
 <img width="644" height="69" alt="image" src="https://github.com/user-attachments/assets/7004592c-5ab3-4097-862a-ecf6f9bcaccc" />
 
 ---
@@ -152,6 +152,9 @@ Create similar events for the other three buttons:
 **ButtonInclusion clicked:**
 - Set CurrentValue to "Inclusion"
 - Go to Layout 2
+
+It should look like:
+<img width="651" height="319" alt="image" src="https://github.com/user-attachments/assets/cc341d56-057d-4ed1-9945-db61aa2cd6ed" />
 
 ---
 
@@ -174,6 +177,10 @@ Create similar events for the other three buttons:
 
 **Note:** This text will be updated to show the selected value when the layout starts.
 
+It should look like:
+<img width="306" height="88" alt="image" src="https://github.com/user-attachments/assets/24e103d4-0557-4008-accc-57df4c8297b1" />
+
+
 ---
 
 ### **12. Add Description Text Input**
@@ -194,6 +201,10 @@ Create similar events for the other three buttons:
 3. Position below text input
 4. Resize if needed
 
+It should look like:
+
+<img width="288" height="196" alt="image" src="https://github.com/user-attachments/assets/2dd91633-9a7a-4954-ae73-cc0e50573381" />
+
 ---
 
 ## **Part 5: Layout 2 Events - Save to Array**
@@ -204,6 +215,8 @@ Create similar events for the other three buttons:
    - Text: **"What did you do to demonstrate " & CurrentValue & "?"**
 
 **What this does:** When you arrive at Layout 2, the instructions update to show which value you selected.
+
+
 
 ---
 
