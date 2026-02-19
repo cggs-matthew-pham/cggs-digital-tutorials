@@ -216,7 +216,7 @@ It should look like:
 
 **What this does:** When you arrive at Layout 2, the instructions update to show which value you selected.
 
-
+![SelectValueAnimation.gif](https://raw.githubusercontent.com/cggs-matthew-pham/cggs-digital-tutorials/refs/heads/main/SelectValueAnimation.gif)
 
 ---
 
@@ -241,6 +241,12 @@ It should look like:
 5. Click **Add to My Journal**
 6. Check the array in debugger (F12) - should show your entry
 
+It should look like:
+
+<img width="771" height="336" alt="image" src="https://github.com/user-attachments/assets/15ea755c-f025-4dd7-a5f2-c5555cbcda2e" />
+
+
+
 ---
 
 ## **Part 6: Layout 3 - Journal Display**
@@ -260,6 +266,10 @@ It should look like:
 6. Select **TextInstructions** and change its text to:
    - **Text**: "My values in action"
 
+It should look like:
+
+<img width="201" height="73" alt="image" src="https://github.com/user-attachments/assets/a6a1cef0-2e6f-4d3b-9eb1-3d2c5356421e" />
+
 ---
 
 ### **19. Add List Object**
@@ -269,6 +279,10 @@ It should look like:
    - Position: Center of layout
    - Make it large enough to show multiple entries (tall and wide)
 
+It should look like:
+
+<img width="263" height="267" alt="image" src="https://github.com/user-attachments/assets/c89cd033-3223-4fc3-8ed0-1e2c7ea20332" />
+
 ---
 
 ### **20. Add Celebrate Button**
@@ -277,6 +291,10 @@ It should look like:
    - **Name**: ButtonCelebrate
    - **Text**: "Celebrate another moment!"
 3. Position at bottom of layout
+
+It should look like:
+
+<img width="269" height="308" alt="image" src="https://github.com/user-attachments/assets/9a148bbb-eb6a-42fe-8215-513e6d7a9044" />
 
 ---
 
@@ -314,6 +332,8 @@ It should look like:
 6. Click **Celebrate another moment!**
 7. Add 3-4 more entries with different values
 8. View your growing journal on Layout 3
+
+![CompleteValuesAnimation.gif](https://raw.githubusercontent.com/cggs-matthew-pham/cggs-digital-tutorials/refs/heads/main/CompleteValuesAnimation.gif)
 
 ---
 
