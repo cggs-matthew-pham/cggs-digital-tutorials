@@ -58,7 +58,8 @@ Insert 4 **Sprite** objects for each core value:
 
 **Sprite 3:**
 - **Name**: SpriteInclusion
-<img width="412" height="409" alt="image" src="https://github.com/user-attachments/assets/490614ef-bd36-4614-bacd-32cf538bd3da" />
+<img width="364" height="377" alt="image" src="https://github.com/user-attachments/assets/c48da57c-4405-45f4-a281-229c138e6643" />
+
 
 
 **Sprite 4:**
