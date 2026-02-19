@@ -2,6 +2,9 @@
 
 ## **Create a Prototype Using Construct 3**
 
+<img width="480" height="480" alt="image" src="https://github.com/user-attachments/assets/15c27ea7-ad8d-4614-b03c-ca0122409877" />
+
+
 ---
 
 ## **Learning Intention**
