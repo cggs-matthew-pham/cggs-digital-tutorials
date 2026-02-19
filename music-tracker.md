@@ -232,3 +232,5 @@ Open the **Event Sheet**.
 1. Press **F5** to run
 2. Enter practice hours and click **Save**
 3. When total reaches 10 or more, the celebration animation should appear!
+
+![CompleteAppAnimation.gif](https://raw.githubusercontent.com/cggs-matthew-pham/cggs-digital-tutorials/refs/heads/main/CompleteAppAnimation.gif)
