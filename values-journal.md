@@ -35,6 +35,7 @@
    - **Text**: "Which value did you demonstrate today?"
    - **Size**: 18, centered
 3. Position below title
+4. It should look like:
 
 <img width="329" height="115" alt="image" src="https://github.com/user-attachments/assets/8a0de1c6-19b2-4d02-9160-fc0850613767" />
 
@@ -45,27 +46,24 @@
 Insert 4 **Sprite** objects for each core value:
 
 **Sprite 1:**
-- **Name**: SpriteRespect
-<img width="445" height="397" alt="image" src="https://github.com/user-attachments/assets/f21b889a-71d7-4a9a-8fe1-4aaa86e15f0c" />
-
-
+- **Name**: SpriteIntegrity
+<img width="150" height="150" alt="image" src="https://github.com/user-attachments/assets/1149009e-46dd-4a5a-b053-b920797d4679" />
 
 **Sprite 2:**
-- **Name**: SpriteIntegrity
-<img width="354" height="359" alt="image" src="https://github.com/user-attachments/assets/1149009e-46dd-4a5a-b053-b920797d4679" />
-
-
+- **Name**: SpriteCourage
+<img width="150" height="150" alt="image" src="https://github.com/user-attachments/assets/70a44180-a13f-425d-a81f-5d32ddda4c79" />
 
 **Sprite 3:**
-- **Name**: SpriteInclusion
-<img width="364" height="377" alt="image" src="https://github.com/user-attachments/assets/c48da57c-4405-45f4-a281-229c138e6643" />
-
-
+- **Name**: SpriteRespect
+<img width="150" height="150" alt="image" src="https://github.com/user-attachments/assets/f21b889a-71d7-4a9a-8fe1-4aaa86e15f0c" />
 
 **Sprite 4:**
-- **Name**: SpriteCourage
-<img width="378" height="399" alt="image" src="https://github.com/user-attachments/assets/70a44180-a13f-425d-a81f-5d32ddda4c79" />
+- **Name**: SpriteInclusion
+<img width="150" height="150" alt="image" src="https://github.com/user-attachments/assets/c48da57c-4405-45f4-a281-229c138e6643" />
 
+<br/>
+
+It should look like:
 
 <img width="440" height="194" alt="image" src="https://github.com/user-attachments/assets/a77c9946-c345-4227-a02d-88cdff68eae6" />
 
@@ -90,6 +88,7 @@ Add text buttons below each sprite to make the values clear:
      - **Name**: ButtonCourage
      - **Text**: "Courage"
 4. Position all buttons in a row below their corresponding sprites
+5. It should look like:
 
 <img width="471" height="254" alt="image" src="https://github.com/user-attachments/assets/2f06dff6-5d29-44ed-91c4-4ca1c6334128" />
 
@@ -107,6 +106,9 @@ The array will contain a list of journal logs in the format: _[value]: [descript
    - **Name**: CurrentValue
    - **Type**: Text
    - **Initial value**: "" (empty)
+4. It should look like:
+   <img width="255" height="33" alt="image" src="https://github.com/user-attachments/assets/857eb91b-9432-40f7-8a70-8bd4db76d607" />
+
 ---
 
 ### **7. Add Array Object**
@@ -116,6 +118,9 @@ The array will contain a list of journal logs in the format: _[value]: [descript
    - **Width**: 0 (starts empty)
    - **Height**: 1
    - **Depth**: 1
+<img width="551" height="173" alt="image" src="https://github.com/user-attachments/assets/9228f096-f9ea-4103-8eca-c1236534f61c" />
+<img width="193" height="120" alt="image" src="https://github.com/user-attachments/assets/3048cd8a-3db2-4ace-9528-523099b25222" />
+
 
 ---
 
@@ -128,6 +133,8 @@ The array will contain a list of journal logs in the format: _[value]: [descript
    - Value: **"Integrity"**
 3. Add action → **System** → **Go to layout**
    - Layout: **Layout 2**
+4. It should look like:
+<img width="644" height="69" alt="image" src="https://github.com/user-attachments/assets/7004592c-5ab3-4097-862a-ecf6f9bcaccc" />
 
 ---
 
