@@ -2,8 +2,8 @@
 
 ## Year 7 Construct 3 Tutorials
 
-- [Music Practice Tracker](music-practice-tracker.md)
-- [Values Journal](values-journal.md)
+- [Music Practice Tracker](music-tracker)
+- [Values Journal](values-journal)
 
 ---
 
