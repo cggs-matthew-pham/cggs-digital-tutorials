@@ -39,8 +39,10 @@ Go to: **https://editor.construct.net**
 1. Click **Register**
 2. Select **Sign in with Google**
 
-![[Pasted image 20260219115659.png]]
-![[Pasted image 20260219115707.png]]
+<img width="1300" height="304" alt="image" src="https://github.com/user-attachments/assets/3c6703ba-2ee9-4080-8dd0-1cfaf607ee57" />
+
+<img width="401" height="247" alt="image" src="https://github.com/user-attachments/assets/34529d87-cf1f-4ffc-b8b8-76aab56f7c9d" />
+
 ---
 
 # **3. Update Save & Backup Settings**
@@ -55,10 +57,12 @@ Inside Construct 3:
 
 _(You may be prompted to sign in with your Microsoft account.)_
 
-![[Pasted image 20260219115753.png]]
+<img width="602" height="170" alt="image" src="https://github.com/user-attachments/assets/d30598e9-39b8-4410-b580-7553432181ee" /><br/>
 
-![[Pasted image 20260219115809.png]]
-![[Pasted image 20260219115815.png]]
+<img width="188" height="596" alt="image" src="https://github.com/user-attachments/assets/c42cda8f-0177-4373-b4cd-b76eb6d49a2b" />
+
+<img width="408" height="468" alt="image" src="https://github.com/user-attachments/assets/cd03da7f-ff03-45c4-9fb7-2600fa25ec7b" />
+
 ---
 # **4. Create a New Project**
 
@@ -66,8 +70,10 @@ _(You may be prompted to sign in with your Microsoft account.)_
 2. Project name: **Music Practice Tracker**
 3. Click **Create**
 
-![[Pasted image 20260219115901.png]]
-![[Pasted image 20260219115906.png]]
+<img width="1238" height="176" alt="image" src="https://github.com/user-attachments/assets/42b8d058-bafa-408f-bb36-817577d89aa4" />
+
+<img width="630" height="494" alt="image" src="https://github.com/user-attachments/assets/2cb2c919-11c4-4628-9cb0-c5e0cee08081" />
+
 ---
 
 # **5. Design the User Interface (UI)**
@@ -88,9 +94,11 @@ Add:
 
 HINT: use the search icon to find objects
 
-![[Pasted image 20260219115918.png]]
+<img width="266" height="300" alt="image" src="https://github.com/user-attachments/assets/eae93cb0-b3a2-440d-9b8d-51904084bfee" />
 
-![[Pasted image 20260219115939.png]]
+
+<img width="908" height="758" alt="image" src="https://github.com/user-attachments/assets/720cd479-55d3-4dc1-b321-d7815560d7f4" />
+
 ### **Update Text Properties**
 
 Click each object and update its **Text** property:
@@ -102,10 +110,13 @@ Click each object and update its **Text** property:
 
 Optional: Adjust **size**, **alignment**, or other visual properties.
 
-![[Pasted image 20260219120101.png]]
-![[Pasted image 20260219120015.png]]
+<img width="374" height="552" alt="image" src="https://github.com/user-attachments/assets/94526a4d-b48b-4c3a-9526-a879213f8bc4" />
 
-![[Pasted image 20260219120022.png]]
+<img width="460" height="388" alt="image" src="https://github.com/user-attachments/assets/df1195d1-f44f-4f5e-82ac-935ccc35c651" />
+
+
+<img width="548" height="434" alt="image" src="https://github.com/user-attachments/assets/d40dad1f-7653-4362-980c-7a7a28e7a287" />
+
 ---
 
 # **6. Event Sheet – Adding Logic**
@@ -131,8 +142,7 @@ This makes the Save button store the number of hours and display the total.
 
 1. Global Variable
 
-![[Pasted image 20260219120121.png]]
-![[Pasted image 20260219120213.png]]
+<img width="268" height="490" alt="image" src="https://github.com/user-attachments/assets/e520683f-e561-4e7c-90ee-3e23d3cd49bf" />
 
 2. Button event → On clicked
 ![[Pasted image 20260219120254.png]]
@@ -141,7 +151,8 @@ This makes the Save button store the number of hours and display the total.
 ![[Pasted image 20260219120357.png]]
 
 3. Action for System → Add 1 to hours
-![[Pasted image 20260219120916.png]]
+<img width="909" height="163" alt="image" src="https://github.com/user-attachments/assets/f3d4d6fc-a225-46cf-947d-3a0567e122b7" />
+
 
 ![[Pasted image 20260219120930.png]]
 
@@ -165,6 +176,7 @@ This makes the Save button store the number of hours and display the total.
 ### **Download and Insert the GIF**
 
 1. Drag and drop the Great Work Animation file below into your Construct 3 layout
+   
 ![GreatWorkAnimation.gif](https://raw.githubusercontent.com/cggs-matthew-pham/cggs-digital-tutorials/refs/heads/main/GreatWorkAnimation.gif)
 
 ### **Configure the Sprite**
