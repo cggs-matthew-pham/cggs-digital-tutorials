@@ -52,7 +52,8 @@ Insert 4 **Sprite** objects for each core value:
 
 **Sprite 2:**
 - **Name**: SpriteIntegrity
-<img width="298" height="221" alt="image" src="https://github.com/user-attachments/assets/3b10e487-57de-48e7-b349-041128ab1be4" />
+<img width="354" height="359" alt="image" src="https://github.com/user-attachments/assets/1149009e-46dd-4a5a-b053-b920797d4679" />
+
 
 
 **Sprite 3:**
