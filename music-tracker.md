@@ -2,8 +2,6 @@
 
 ## **Create a Prototype Using Construct 3**
 
-<img width="480" height="480" alt="image" src="https://github.com/user-attachments/assets/15c27ea7-ad8d-4614-b03c-ca0122409877" />
-
 
 ---
 
@@ -166,8 +164,8 @@ This makes the Save button store the number of hours and display the total.
 
 ### **Download and Insert the GIF**
 
-1. Drag and drop the Great Work Animation file from Agora into your Construct 3 layout
-![[Pasted image 20260219161118.png]]
+1. Drag and drop the Great Work Animation file below into your Construct 3 layout
+[![[Pasted image 20260219161118.png]]](https://raw.githubusercontent.com/cggs-matthew-pham/cggs-digital-tutorials/refs/heads/main/GreatWorkAnimation.gif)
 
 ![[Screenshot - Import GIF]]
 
