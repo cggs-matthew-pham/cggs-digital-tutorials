@@ -165,9 +165,7 @@ This makes the Save button store the number of hours and display the total.
 ### **Download and Insert the GIF**
 
 1. Drag and drop the Great Work Animation file below into your Construct 3 layout
-[![[Pasted image 20260219161118.png]]](https://raw.githubusercontent.com/cggs-matthew-pham/cggs-digital-tutorials/refs/heads/main/GreatWorkAnimation.gif)
-
-![[Screenshot - Import GIF]]
+![GreatWorkAnimation.gif](https://raw.githubusercontent.com/cggs-matthew-pham/cggs-digital-tutorials/refs/heads/main/GreatWorkAnimation.gif)
 
 ### **Configure the Sprite**
 
