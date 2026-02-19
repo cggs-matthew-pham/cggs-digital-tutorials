@@ -223,7 +223,7 @@ Open the **Event Sheet**.
 4. Add **Action** → **GreatWorkAnimation** → **Set visible**
 3. Your event should read: _"System: HoursPracticed ≥ 10 → SpriteGreatWork: Set visible"_
 
-![[Screenshot - Conditional Event]]
+![CompareVariableAnimation.gif](https://raw.githubusercontent.com/cggs-matthew-pham/cggs-digital-tutorials/refs/heads/main/CompareVariableAnimation.gif)
 
 ### **Test Your Prototype**
 
