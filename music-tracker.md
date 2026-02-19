@@ -144,32 +144,43 @@ This makes the Save button store the number of hours and display the total.
 
 <img width="268" height="490" alt="image" src="https://github.com/user-attachments/assets/e520683f-e561-4e7c-90ee-3e23d3cd49bf" />
 
+<img width="380" height="313" alt="image" src="https://github.com/user-attachments/assets/80046fc4-5d8c-4fee-8a80-aaea6151388f" />
+
 2. Button event → On clicked
-![[Pasted image 20260219120254.png]]
-![[Pasted image 20260219120419.png]]
-![[Pasted image 20260219120408.png]]
-![[Pasted image 20260219120357.png]]
+<img width="186" height="309" alt="image" src="https://github.com/user-attachments/assets/21707aac-41d6-4720-84ef-aa42f7c44780" />
+
+<img width="535" height="260" alt="image" src="https://github.com/user-attachments/assets/8726cdb7-d62e-47c9-acaa-c78dd0a4e223" />
+
+<img width="539" height="172" alt="image" src="https://github.com/user-attachments/assets/1f5c9c3d-5248-4de8-bf56-6c789816fd85" />
+
+<img width="689" height="30" alt="image" src="https://github.com/user-attachments/assets/926712d4-ac27-4ab7-9642-aa224626c2ae" />
+
 
 3. Action for System → Add 1 to hours
-<img width="909" height="163" alt="image" src="https://github.com/user-attachments/assets/f3d4d6fc-a225-46cf-947d-3a0567e122b7" />
+<img width="374" height="35" alt="image" src="https://github.com/user-attachments/assets/a514768c-5c7b-4721-b5d9-798e7cbc697a" /><br/>
 
 
-![[Pasted image 20260219120930.png]]
 
-![[Pasted image 20260219121006.png]]
+<img width="573" height="248" alt="image" src="https://github.com/user-attachments/assets/adb210d1-c949-46b7-9530-74211c2dfb9a" />
 
-![[Pasted image 20260219121023.png]]
-![[Pasted image 20260219121052.png]]
+
+<img width="550" height="448" alt="image" src="https://github.com/user-attachments/assets/83cad1b6-99f3-4d1f-b680-40867e607319" />
+
+
+<img width="459" height="280" alt="image" src="https://github.com/user-attachments/assets/e0a00d68-2947-4f7d-944a-746fd8554cab" />
+
+<img width="557" height="41" alt="image" src="https://github.com/user-attachments/assets/7b76f562-2bae-476b-abe6-18d8bc7ccfb3" />
+
 4.  Action for TextDisplayHours→ Update visible total hours
 
-![[Pasted image 20260219121254.png]]
+<img width="546" height="241" alt="image" src="https://github.com/user-attachments/assets/39308941-df43-4d41-ae50-dfd1c1e5848a" /><br/>
+<img width="554" height="210" alt="image" src="https://github.com/user-attachments/assets/ebdf643a-5b5b-4854-8b72-0366f4e6e097" />
+<img width="451" height="273" alt="image" src="https://github.com/user-attachments/assets/7fd9c2e5-e7f8-4038-b3c0-bab0a2e54a20" />
 
-![[Pasted image 20260219121325.png]]
-
-![[Pasted image 20260219121405.png]]
 5. Update System Action
 
-![[Pasted image 20260219121507.png]]
+<img width="456" height="275" alt="image" src="https://github.com/user-attachments/assets/2da31d4f-96e6-4e3b-b8b2-296166552c84" />
+
 
 # **7. Add a "Great Work Animation" GIF**
 
@@ -181,36 +192,35 @@ This makes the Save button store the number of hours and display the total.
 
 ### **Configure the Sprite**
 
-1. Select the sprite on the layout
-2. In the **Properties** panel:
-    - **Name**: Change to **SpriteGreatWork**
-    - **Initial visibility**: Set to **Invisible**
-3. Right-click the sprite in the layout → **Animations**
-4. In the **Animations** window:
+1. Double-click the sprite on the layout
+2. In the **Animation** window under **Animation Properties (on the right)**:
     - Set **Speed**: **12** (frames per second)
     - Set **Repeat**: **Loop** (or **Repeat count** if you want it to play once)
-5. Close the Animations window
+3. Close the Animations window
 
-![[Screenshot - Sprite Properties]] ![[Screenshot - Animation Settings]]
+<img width="201" height="222" alt="image" src="https://github.com/user-attachments/assets/7670c479-a329-4020-831d-9b6f903d94a1" />
 
 ### **Test the Animation**
 
-Before adding the condition, let's test the animation works:
-
-1. Temporarily set **Initial visibility** to **Visible**
-2. Press **F5** to run the project
-3. You should see the animation playing
-4. Close the preview and set **Initial visibility** back to **Invisible**
+1. Press **F5** to run the project
+2. You should see the animation playing
 
 ### **Add Conditional Logic**
 
+Now we will configure the program to only show the Great Work Animation when the hours practiced is greater or equal to 10.
+
+1. Click on the sprite to select it
+2. Under **Properties** to the left, untick **Initial visibility**
+
+<img width="289" height="189" alt="image" src="https://github.com/user-attachments/assets/f84a6524-9c6c-49f0-b897-9ceb1fe998f2" />
+
 Open the **Event Sheet**.
 
-1. Right-click → **Add event** → **System** → **Compare variable**
+3. Right-click → **Add event** → **System** → **Compare variable**
     - Variable: **HoursPracticed**
     - Comparison: **≥ (Greater or equal)**
     - Value: **10**
-2. Add **Action** → **SpriteGreatWork** → **Set visible**
+4. Add **Action** → **GreatWorkAnimation** → **Set visible**
 3. Your event should read: _"System: HoursPracticed ≥ 10 → SpriteGreatWork: Set visible"_
 
 ![[Screenshot - Conditional Event]]
