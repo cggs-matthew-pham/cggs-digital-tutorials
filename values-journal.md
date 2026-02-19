@@ -21,7 +21,7 @@
 2. Properties:
    - **Name**: TextTitle
    - **Text**: "Values Journal"
-   - **Size**: 48, **Bold**, centered
+   - **Size**: 36, centered
 3. Position at top of layout
 
 ![[Screenshot - Title]]
