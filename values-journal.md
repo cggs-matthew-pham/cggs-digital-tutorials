@@ -67,229 +67,247 @@ Insert 4 **Sprite** objects for each core value:
 <img width="378" height="399" alt="image" src="https://github.com/user-attachments/assets/70a44180-a13f-425d-a81f-5d32ddda4c79" />
 
 
-![[Screenshot - Value Stickers]]
+<img width="440" height="194" alt="image" src="https://github.com/user-attachments/assets/a77c9946-c345-4227-a02d-88cdff68eae6" />
+
 
 ---
 
-### **5. Add Description Text Input**
+### **5. Add Value Buttons**
+Add text buttons below each sprite to make the values clear:
+
+1. Insert **Button** object below SpriteRespect
+2. Properties:
+   - **Name**: ButtonRespect
+   - **Text**: "Respect"
+3. Repeat for the other three values:
+   - Insert **Button** below SpriteIntegrity
+     - **Name**: ButtonIntegrity
+     - **Text**: "Integrity"
+   - Insert **Button** below SpriteInclusion
+     - **Name**: ButtonInclusion
+     - **Text**: "Inclusion"
+   - Insert **Button** below SpriteCourage
+     - **Name**: ButtonCourage
+     - **Text**: "Courage"
+4. Position all buttons in a row below their corresponding sprites
+
+<img width="471" height="254" alt="image" src="https://github.com/user-attachments/assets/2f06dff6-5d29-44ed-91c4-4ca1c6334128" />
+
+---
+
+## **Part 2: Create a Global Variable and Array**
+The global variable will store the currently selected value.
+
+The array will contain a list of journal logs in the format: _[value]: [description]_
+
+### **6. Add Global Variables**
+1. Open **Event Sheet 1**
+2. Right-click → **Add global variable**
+3. Create first variable:
+   - **Name**: CurrentValue
+   - **Type**: Text
+   - **Initial value**: "" (empty)
+---
+
+### **7. Add Array Object**
+1. In Layout 1, right-click → **Insert New Object** → **Array**
+2. Properties:
+   - **Name**: ArrayJournal
+   - **Width**: 0 (starts empty)
+   - **Height**: 1
+   - **Depth**: 1
+
+---
+
+## **Part 3: Layout 1 Events - Value Selection**
+
+### **8. Event: Click Integrity Button**
+1. In Event Sheet 1, add event → **ButtonIntegrity** → **On clicked**
+2. Add action → **System** → **Set value**
+   - Variable: **CurrentValue**
+   - Value: **"Integrity"**
+3. Add action → **System** → **Go to layout**
+   - Layout: **Layout 2**
+
+---
+
+### **9. Repeat for Other Value Buttons**
+Create similar events for the other three buttons:
+
+**ButtonRespect clicked:**
+- Set CurrentValue to "Respect"
+- Go to Layout 2
+
+**ButtonCourage clicked:**
+- Set CurrentValue to "Courage"
+- Go to Layout 2
+
+**ButtonInclusion clicked:**
+- Set CurrentValue to "Inclusion"
+- Go to Layout 2
+
+---
+
+## **Part 4: Layout 2 - Description Entry**
+
+### **10. Create Layout 2**
+1. Right-click in Project panel → **Add** → **Layout**
+2. **Name**: Layout 2
+
+---
+
+### **11. Add Title and Instructions to Layout 2**
+1. Select **TextTitle** and **TextInstructions** on Layout 1
+2. Copy them (Ctrl+C or Cmd+C)
+3. Switch to **Layout 2**
+4. Paste (Ctrl+V or Cmd+V)
+5. Position them at the top of Layout 2
+6. Select **TextInstructions** and change its text to:
+   - **Text**: "What did you do to demonstrate ...?"
+
+**Note:** This text will be updated to show the selected value when the layout starts.
+
+---
+
+### **12. Add Description Text Input**
 1. Insert **Text Input** object
 2. Properties:
-   - **Name**: TextInputDescription
-   - **Placeholder**: "What did you do? (e.g., I helped a friend)"
-3. Position below stickers
-
-![[Screenshot - Description Input]]
+   - **Name**: TextInput
+   - **Placeholder**: "Describe what you did..."
+   - Make it large enough for multiple lines of text
+3. Position in center of layout
 
 ---
 
-### **6. Add Save Button**
+### **13. Add Save Button**
 1. Insert **Button** object
 2. Properties:
    - **Name**: ButtonSave
    - **Text**: "Add to My Journal"
 3. Position below text input
-
-![[Screenshot - Save Button]]
-
----
-
-### **7. Add View Journal Button**
-1. Insert **Button** object
-2. Properties:
-   - **Name**: ButtonViewJournal
-   - **Text**: "View My Journal"
-3. Position below Save button
-
-![[Screenshot - View Journal Button]]
+4. Resize if needed
 
 ---
 
-## **Part 2: Create Array and Global Variable**
+## **Part 5: Layout 2 Events - Save to Array**
 
-### **8. Add Array Object**
-1. Right-click layout → **Insert New Object** → **Array**
-2. Properties:
-   - **Name**: ArrayValueEntries
-   - **Width**: 0 (starts empty)
-   - **Height**: 1
-   - **Depth**: 1
+### **14. Event: Update Instructions on Layout Start**
+1. In Event Sheet 2 (for Layout 2), add event → **System** → **On start of layout**
+2. Add action → **TextInstructions** → **Set text**
+   - Text: **"What did you do to demonstrate " & CurrentValue & "?"**
 
-![[Screenshot - Array Object]]
+**What this does:** When you arrive at Layout 2, the instructions update to show which value you selected.
 
 ---
 
-### **9. Add Global Variable**
-1. Open **Event Sheet**
-2. Right-click → **Add global variable**
-3. Properties:
-   - **Name**: SelectedValue
-   - **Type**: Text
-   - **Initial value**: "" (empty)
-
-![[Screenshot - Global Variable]]
-
----
-
-## **Part 3: Event Logic - Selecting Values**
-
-### **10. Event: Click Respect Sticker**
-1. Add event → **SpriteRespect** → **On clicked**
-2. Add action → **System** → **Set value**
-   - Variable: **SelectedValue**
-   - Value: **"Respect"**
-
-![[Screenshot - Respect Event]]
-
----
-
-### **11. Repeat for Other Values**
-Create similar events for:
-- **SpriteIntegrity** → Set SelectedValue to "Integrity"
-- **SpriteInclusion** → Set SelectedValue to "Inclusion"
-- **SpriteCourage** → Set SelectedValue to "Courage"
-
-![[Screenshot - All Value Events]]
-
----
-
-## **Part 4: Saving to Array**
-
-### **12. Event: Save Button Clicked**
+### **15. Event: Save Entry and Navigate**
 1. Add event → **ButtonSave** → **On clicked**
-2. Add action → **ArrayValueEntries** → **Push**
+2. Add action → **ArrayJournal** → **Push**
    - Where: **Back**
-   - Value: **SelectedValue**
+   - Value: **uppercase(CurrentValue) & ": " & TextInput.Text**
    - Type: **X axis**
-3. Add action → **ArrayValueEntries** → **Push**
-   - Where: **Back**
-   - Value: **TextInputDescription.Text**
-   - Type: **X axis**
-4. Add action → **TextInputDescription** → **Set text**
-   - Text: **""** (clear the input for next entry)
+3. Add action → **System** → **Go to layout**
+   - Layout: **Layout 3**
 
-**What this does:** Saves the value name first, then saves the description. Each journal entry uses two array slots.
-
-![[Screenshot - Save Event]]
+**What this does:** Combines the value name (in uppercase) with your description and saves it to the array, then shows your journal.
 
 ---
 
-### **13. Test Part 1**
+### **16. Test Part 1**
 1. Press **F5** to run
-2. Click a value sticker
-3. Type a description in the text input
-4. Click **Add to My Journal**
-5. Add several more entries
-6. Check array in debugger (F12) - should show values and descriptions alternating
-
-![[Screenshot - Debug Array]]
+2. Click a value button on Layout 1
+3. Notice Layout 2 shows your selected value in the instructions
+4. Type a description
+5. Click **Add to My Journal**
+6. Check the array in debugger (F12) - should show your entry
 
 ---
 
-## **Part 5: Create Journal Layout**
+## **Part 6: Layout 3 - Journal Display**
 
-### **14. Add Second Layout**
+### **17. Create Layout 3**
 1. Right-click in Project panel → **Add** → **Layout**
-2. Name: **LayoutJournal**
-
-![[Screenshot - Add Layout]]
+2. **Name**: Layout 3
 
 ---
 
-### **15. Add Journal Title**
-1. On LayoutJournal, insert **Text** object
-2. Properties:
-   - **Name**: TextJournalTitle
-   - **Text**: "My Values Journal"
-   - **Size**: 48, centered, bold
-3. Position at top
-
-![[Screenshot - Journal Title]]
+### **18. Add Title and Subtitle to Layout 3**
+1. Select **TextTitle** and **TextInstructions** on Layout 1
+2. Copy them (Ctrl+C or Cmd+C)
+3. Switch to **Layout 3**
+4. Paste (Ctrl+V or Cmd+V)
+5. Position them at the top of Layout 3
+6. Select **TextInstructions** and change its text to:
+   - **Text**: "My values in action"
 
 ---
 
-### **16. Add List Object**
+### **19. Add List Object**
 1. Insert **List** object
 2. Properties:
-   - **Name**: ListValueHistory
+   - **Name**: List
    - Position: Center of layout
-   - Make it large enough to show multiple entries
-
-![[Screenshot - List Object]]
+   - Make it large enough to show multiple entries (tall and wide)
 
 ---
 
-### **17. Add Back Button**
+### **20. Add Celebrate Button**
 1. Insert **Button** object
 2. Properties:
-   - **Name**: ButtonBack
-   - **Text**: "Back"
-3. Position at bottom
-
-![[Screenshot - Back Button]]
+   - **Name**: ButtonCelebrate
+   - **Text**: "Celebrate another moment!"
+3. Position at bottom of layout
 
 ---
 
-## **Part 6: Navigation and Display Logic**
+## **Part 7: Layout 3 Events - Display Journal**
 
-### **18. Event: Navigate to Journal**
-1. Switch to Event Sheet (for Layout 1)
-2. Add event → **ButtonViewJournal** → **On clicked**
-3. Add action → **System** → **Go to layout**
-   - Layout: **LayoutJournal**
+### **21. Event: Clear and Display Journal Entries**
+1. In Event Sheet 3 (for Layout 3), add event → **System** → **On start of layout**
+2. Add action → **List** → **Clear all items**
 
-![[Screenshot - Navigate Event]]
+3. Add sub-event → **System** → **Repeat**
+   - Count: **ArrayJournal.Width**
 
----
+4. Add action to the Repeat sub-event → **List** → **Add item**
+   - Text: **ArrayJournal.At(LoopIndex)**
 
-### **19. Event: Display Value History**
-1. Add event → **System** → **On start of layout**
-2. Add action → **ListValueHistory** → **Clear**
-3. Add sub-event → **System** → **For each ArrayValueEntries**
-   - This creates a loop through every item
-4. Add action to sub-event → **ListValueHistory** → **Add item**
-   - Text: **ArrayValueEntries.At(loopindex)**
-
-**Note:** This will display all entries in order - values and descriptions will appear on separate lines. It's a simple approach that shows how arrays store data sequentially.
-
-![[Screenshot - Display Logic]]
+**What this does:** When you reach Layout 3, it clears the list, then loops through every entry in the array and adds it to the list for display.
 
 ---
 
-### **20. Event: Navigate Back**
-1. Add event → **ButtonBack** → **On clicked**
+### **22. Event: Return to Start**
+1. Add event → **ButtonCelebrate** → **On clicked**
 2. Add action → **System** → **Go to layout**
    - Layout: **Layout 1**
 
-![[Screenshot - Back Event]]
-
 ---
 
-## **Part 7: Final Testing**
+## **Part 8: Final Testing**
 
-### **21. Test Complete App**
-1. Press **F5**
-2. Click a value sticker
-3. Type what you did (e.g., "I helped someone in class")
+### **23. Test Complete App**
+1. Press **F5** to run
+2. On Layout 1, click **Integrity**
+3. On Layout 2, type "I admitted when I made a mistake"
 4. Click **Add to My Journal**
-5. Add at least 3-4 more entries with different values and descriptions
-6. Click **View My Journal**
-7. Notice how the list shows values and descriptions on separate lines
-8. Click **Back** and add more entries
-
-![[Screenshot - Final Result]]
+5. On Layout 3, see your entry displayed as "INTEGRITY: I admitted when I made a mistake"
+6. Click **Celebrate another moment!**
+7. Add 3-4 more entries with different values
+8. View your growing journal on Layout 3
 
 ---
 
 ## **Success Criteria**
-✔ I can click value stickers to select which value I demonstrated  
-✔ I can type a description of what I did  
-✔ I can save values and descriptions to an array  
-✔ I can view a list showing all my entries  
-✔ I can navigate between the main screen and my journal
+✔ I can select which value I demonstrated  
+✔ I can describe what I did to demonstrate that value  
+✔ I can save my entries to an array  
+✔ I can view all my entries in a journal list  
+✔ I can navigate between all three screens  
+✔ I understand how arrays store data sequentially
 
 ---
 
 ## **Reflection Questions**
-- What do you notice about how the list displays your entries?
-- Can you think of ways to make the display clearer (hint: grouping values with their descriptions)?
-- Why might storing data this way become challenging as you add more entries?
+- How does the array help organize your journal entries?
+- What happens to your entries when you add more? Where do they appear in the list?
+- Can you think of other apps that might use arrays to store lists of information?
