@@ -225,6 +225,8 @@ Open the **Event Sheet**.
 
 ![CompareVariableAnimation.gif](https://raw.githubusercontent.com/cggs-matthew-pham/cggs-digital-tutorials/refs/heads/main/CompareVariableAnimation.gif)
 
+![SetVisibleAnimation.gif](https://raw.githubusercontent.com/cggs-matthew-pham/cggs-digital-tutorials/refs/heads/main/SetVisibleAnimation.gif)
+
 ### **Test Your Prototype**
 
 1. Press **F5** to run
