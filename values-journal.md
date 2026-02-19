@@ -12,8 +12,7 @@
 3. Project name: **Values Journal**
 4. Click **Create**
 
-
-
+<img width="376" height="297" alt="image" src="https://github.com/user-attachments/assets/54f3e345-be0a-4886-a8ce-7c6505968722" />
 
 ---
 
