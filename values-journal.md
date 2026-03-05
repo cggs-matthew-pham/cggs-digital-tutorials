@@ -124,9 +124,58 @@ It should look like:
 
 ---
 
-## **Part 3: Layout 1 Events - Value Selection**
+## **Part 3: Layout 2 - Description Entry**
 
-### **8. Event: Click Integrity Button**
+### **8. Create Layout 2**
+1. Right-click in Project panel → **Add** → **Layout**
+2. **Name**: Layout 2
+
+---
+
+### **9. Add Title and Instructions to Layout 2**
+1. Select **TextTitle** and **TextInstructions** on Layout 1
+2. Copy them (Ctrl+C or Cmd+C)
+3. Switch to **Layout 2**
+4. Paste (Ctrl+V or Cmd+V)
+5. Position them at the top of Layout 2
+6. Select **TextInstructions** and change its text to:
+   - **Text**: "What did you do to demonstrate ...?"
+
+**Note:** This text will be updated to show the selected value when the layout starts.
+
+It should look like:
+<img width="306" height="88" alt="image" src="https://github.com/user-attachments/assets/24e103d4-0557-4008-accc-57df4c8297b1" />
+
+
+---
+
+### **10. Add Description Text Input**
+1. Insert **Text Input** object
+2. Properties:
+   - **Name**: TextInput
+   - **Placeholder**: "Describe what you did..."
+   - Make it large enough for multiple lines of text
+3. Position in center of layout
+
+---
+
+### **11. Add Save Button**
+1. Insert **Button** object
+2. Properties:
+   - **Name**: ButtonSave
+   - **Text**: "Add to My Journal"
+3. Position below text input
+4. Resize if needed
+
+It should look like:
+
+<img width="288" height="196" alt="image" src="https://github.com/user-attachments/assets/2dd91633-9a7a-4954-ae73-cc0e50573381" />
+
+---
+
+## **Part 4: Layout 1 Events - Value Selection**
+
+### **12. Event: Click Integrity Button**
 1. In Event Sheet 1, add event → **ButtonIntegrity** → **On clicked**
 2. Add action → **System** → **Set value**
    - Variable: **CurrentValue**
@@ -138,7 +187,7 @@ It should look like:
 
 ---
 
-### **9. Repeat for Other Value Buttons**
+### **13. Repeat for Other Value Buttons**
 Create similar events for the other three buttons:
 
 **ButtonRespect clicked:**
@@ -158,106 +207,15 @@ It should look like:
 
 ---
 
-## **Part 4: Layout 2 - Description Entry**
+## **Part 5: Layout 3 - Journal Display**
 
-### **10. Create Layout 2**
-1. Right-click in Project panel → **Add** → **Layout**
-2. **Name**: Layout 2
-
----
-
-### **11. Add Title and Instructions to Layout 2**
-1. Select **TextTitle** and **TextInstructions** on Layout 1
-2. Copy them (Ctrl+C or Cmd+C)
-3. Switch to **Layout 2**
-4. Paste (Ctrl+V or Cmd+V)
-5. Position them at the top of Layout 2
-6. Select **TextInstructions** and change its text to:
-   - **Text**: "What did you do to demonstrate ...?"
-
-**Note:** This text will be updated to show the selected value when the layout starts.
-
-It should look like:
-<img width="306" height="88" alt="image" src="https://github.com/user-attachments/assets/24e103d4-0557-4008-accc-57df4c8297b1" />
-
-
----
-
-### **12. Add Description Text Input**
-1. Insert **Text Input** object
-2. Properties:
-   - **Name**: TextInput
-   - **Placeholder**: "Describe what you did..."
-   - Make it large enough for multiple lines of text
-3. Position in center of layout
-
----
-
-### **13. Add Save Button**
-1. Insert **Button** object
-2. Properties:
-   - **Name**: ButtonSave
-   - **Text**: "Add to My Journal"
-3. Position below text input
-4. Resize if needed
-
-It should look like:
-
-<img width="288" height="196" alt="image" src="https://github.com/user-attachments/assets/2dd91633-9a7a-4954-ae73-cc0e50573381" />
-
----
-
-## **Part 5: Layout 2 Events - Save to Array**
-
-### **14. Event: Update Instructions on Layout Start**
-1. In Event Sheet 2 (for Layout 2), add event → **System** → **On start of layout**
-2. Add action → **TextInstructions** → **Set text**
-   - Text: **"What did you do to demonstrate " & CurrentValue & "?"**
-
-**What this does:** When you arrive at Layout 2, the instructions update to show which value you selected.
-
-![SelectValueAnimation.gif](https://raw.githubusercontent.com/cggs-matthew-pham/cggs-digital-tutorials/refs/heads/main/SelectValueAnimation.gif)
-
----
-
-### **15. Event: Save Entry and Navigate**
-1. Add event → **ButtonSave** → **On clicked**
-2. Add action → **ArrayJournal** → **Push**
-   - Where: **Back**
-   - Value: **uppercase(CurrentValue) & ": " & TextInput.Text**
-   - Type: **X axis**
-3. Add action → **System** → **Go to layout**
-   - Layout: **Layout 3**
-
-**What this does:** Combines the value name (in uppercase) with your description and saves it to the array, then shows your journal.
-
----
-
-### **16. Test Part 1**
-1. Press **F5** to run
-2. Click a value button on Layout 1
-3. Notice Layout 2 shows your selected value in the instructions
-4. Type a description
-5. Click **Add to My Journal**
-6. Check the array in debugger (F12) - should show your entry
-
-It should look like:
-
-<img width="771" height="336" alt="image" src="https://github.com/user-attachments/assets/15ea755c-f025-4dd7-a5f2-c5555cbcda2e" />
-
-
-
----
-
-## **Part 6: Layout 3 - Journal Display**
-
-### **17. Create Layout 3**
+### **14. Create Layout 3**
 1. Right-click in Project panel → **Add** → **Layout**
 2. **Name**: Layout 3
 
 ---
 
-### **18. Add Title and Subtitle to Layout 3**
+### **15. Add Title and Subtitle to Layout 3**
 1. Select **TextTitle** and **TextInstructions** on Layout 1
 2. Copy them (Ctrl+C or Cmd+C)
 3. Switch to **Layout 3**
@@ -272,7 +230,7 @@ It should look like:
 
 ---
 
-### **19. Add List Object**
+### **16. Add List Object**
 1. Insert **List** object
 2. Properties:
    - **Name**: List
@@ -285,7 +243,7 @@ It should look like:
 
 ---
 
-### **20. Add Celebrate Button**
+### **17. Add Celebrate Button**
 1. Insert **Button** object
 2. Properties:
    - **Name**: ButtonCelebrate
@@ -295,6 +253,47 @@ It should look like:
 It should look like:
 
 <img width="269" height="308" alt="image" src="https://github.com/user-attachments/assets/9a148bbb-eb6a-42fe-8215-513e6d7a9044" />
+
+
+---
+
+## **Part 6: Layout 2 Events - Save to Array**
+
+### **18. Event: Update Instructions on Layout Start**
+1. In Event Sheet 2 (for Layout 2), add event → **System** → **On start of layout**
+2. Add action → **TextInstructions** → **Set text**
+   - Text: **"What did you do to demonstrate " & CurrentValue & "?"**
+
+**What this does:** When you arrive at Layout 2, the instructions update to show which value you selected.
+
+![SelectValueAnimation.gif](https://raw.githubusercontent.com/cggs-matthew-pham/cggs-digital-tutorials/refs/heads/main/SelectValueAnimation.gif)
+
+---
+
+### **19. Event: Save Entry and Navigate**
+1. Add event → **ButtonSave** → **On clicked**
+2. Add action → **ArrayJournal** → **Push**
+   - Where: **Back**
+   - Value: **uppercase(CurrentValue) & ": " & TextInput.Text**
+   - Type: **X axis**
+3. Add action → **System** → **Go to layout**
+   - Layout: **Layout 3**
+
+**What this does:** Combines the value name (in uppercase) with your description and saves it to the array, then shows your journal.
+
+---
+
+### **20. Test Layout 2 Events**
+1. Press **F5** to run
+2. Click a value button on Layout 1
+3. Notice Layout 2 shows your selected value in the instructions
+4. Type a description
+5. Click **Add to My Journal**
+6. Check the array in debugger (F12) - should show your entry
+
+It should look like:
+
+<img width="771" height="336" alt="image" src="https://github.com/user-attachments/assets/15ea755c-f025-4dd7-a5f2-c5555cbcda2e" />
 
 ---
 
