@@ -315,8 +315,11 @@ It should look like:
 
 <img width="602" height="131" alt="image" src="https://github.com/user-attachments/assets/6d43a927-b1ba-46fa-a88f-09e75a374034" />
 
+![clear_list](https://github.com/user-attachments/assets/6aae125e-adb5-4a15-82eb-adcb8b50b1d8)
 
+![add_items_to_list](https://github.com/user-attachments/assets/816c5ffb-bb57-4692-8c1f-97433490cf1d)
 
+![go_to_layout_1](https://github.com/user-attachments/assets/529de287-d3be-428a-9e39-8a21fedc5024)
 
 ---
 
