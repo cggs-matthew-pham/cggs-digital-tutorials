@@ -284,7 +284,7 @@ It should look like:
 ---
 
 ### **20. Test Layout 2 Events**
-1. Press **F5** to run
+1. Select the **Debug Layout** option under the **Play** icon
 2. Click a value button on Layout 1
 3. Notice Layout 2 shows your selected value in the instructions
 4. Type a description
@@ -294,6 +294,9 @@ It should look like:
 It should look like:
 
 <img width="771" height="336" alt="image" src="https://github.com/user-attachments/assets/15ea755c-f025-4dd7-a5f2-c5555cbcda2e" />
+
+![debug_layout](https://github.com/user-attachments/assets/7191fef8-3f33-4cd5-9069-c3ad8d2b76ce)
+
 
 ---
 
