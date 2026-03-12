@@ -319,15 +319,16 @@ It should look like:
 
 ![add_items_to_list](https://github.com/user-attachments/assets/816c5ffb-bb57-4692-8c1f-97433490cf1d)
 
-![go_to_layout_1](https://github.com/user-attachments/assets/529de287-d3be-428a-9e39-8a21fedc5024)
-
 ---
 
 ### **22. Event: Return to Start**
 1. Add event → **ButtonCelebrate** → **On clicked**
 2. Add action → **System** → **Go to layout**
    - Layout: **Layout 1**
+  
+<img width="879" height="259" alt="image" src="https://github.com/user-attachments/assets/d25ed241-d33a-48fb-8d2c-d3244dec3d79" />
 
+![go_to_layout_1](https://github.com/user-attachments/assets/529de287-d3be-428a-9e39-8a21fedc5024)
 ---
 
 ## **Part 8: Final Testing**
