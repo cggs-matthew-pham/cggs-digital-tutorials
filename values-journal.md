@@ -303,13 +303,20 @@ It should look like:
 1. In Event Sheet 3 (for Layout 3), add event → **System** → **On start of layout**
 2. Add action → **List** → **Clear all items**
 
-3. Add sub-event → **System** → **Repeat**
+3. Add a second event → System → On start of layout
+
+4. Right-click the condition → Add another condition → **System** → **Repeat**
    - Count: **ArrayJournal.Width**
 
-4. Add action to the Repeat sub-event → **List** → **Add item**
+5. Add action to the conbined event → **List** → **Add item**
    - Text: **ArrayJournal.At(LoopIndex)**
 
-**What this does:** When you reach Layout 3, it clears the list, then loops through every entry in the array and adds it to the list for display.
+**What this does:** When you reach Layout 3, it clears the list on arrival. Then the second event runs on the same layout start but then loops through every entry in the array. For each journal entry, the code adds it to the list for display.
+
+<img width="602" height="131" alt="image" src="https://github.com/user-attachments/assets/6d43a927-b1ba-46fa-a88f-09e75a374034" />
+
+
+
 
 ---
 
