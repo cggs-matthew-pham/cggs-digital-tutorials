@@ -220,7 +220,7 @@ We want one trigger (`On clicked`) with two possible outcomes — only one shoul
 
 1. Create an event with just the trigger: `Button_Bed On clicked` (no conditions)
 2. Select the event and press **S** to add a **sub-event**
-3. In the sub-event, add condition `Button_Bed Text is "⬜"` and action `Set text to "✅"`
+3. In the sub-event, add condition `Button_Bed → Compare Text → Text to compare "⬜"` and action `Set text to "✅"`
 4. Select the sub-event and press **X** to add an **Else** sub-event
 5. In the Else, add action `Set text to "⬜"`
 
