@@ -110,7 +110,7 @@ For each text box, update the **Name** property so it is clear which box is whic
 
 <img width="581" height="176" alt="image" src="https://github.com/user-attachments/assets/56083e7f-a802-45c8-92dd-24b39138dc39" />
 
-<img width="1021" height="237" alt="image" src="https://github.com/user-attachments/assets/00855123-18f0-4d4a-858f-390063486118" />
+
 
 
 
@@ -137,6 +137,8 @@ Open **Event Sheet 1** from the **Project** panel.
 This makes the checkbox show a tick when clicked.
 
 <!-- Screenshot: Event sheet showing On clicked → Set text event -->
+
+<img width="1021" height="237" alt="image" src="https://github.com/user-attachments/assets/00855123-18f0-4d4a-858f-390063486118" />
 
 <img width="1044" height="62" alt="image" src="https://github.com/user-attachments/assets/c7a35ea8-9d08-4114-897f-e6149b1fc9a5" />
 
