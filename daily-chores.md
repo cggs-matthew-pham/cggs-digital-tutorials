@@ -138,8 +138,6 @@ This makes the checkbox show a tick when clicked.
 
 <!-- Screenshot: Event sheet showing On clicked → Set text event -->
 
-<img width="1021" height="237" alt="image" src="https://github.com/user-attachments/assets/00855123-18f0-4d4a-858f-390063486118" />
-
 <img width="1044" height="62" alt="image" src="https://github.com/user-attachments/assets/c7a35ea8-9d08-4114-897f-e6149b1fc9a5" />
 
 
