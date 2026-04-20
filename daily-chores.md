@@ -39,6 +39,8 @@ It helps test ideas before building the complete product.
 4. Click **Create**
 
 <!-- Screenshot: New Project dialog -->
+<img width="834" height="661" alt="image" src="https://github.com/user-attachments/assets/55557f9d-5b4d-4b16-893b-98574633ac73" />
+
 
 ---
 
@@ -53,6 +55,12 @@ It helps test ideas before building the complete product.
     - **Horizontal Alignment:** Centre
 
 <!-- Screenshot: Title text on the layout with properties panel -->
+
+<img width="517" height="177" alt="image" src="https://github.com/user-attachments/assets/9ad1d54c-91fc-4deb-9da9-8151b69b2cea" />
+
+<img width="591" height="730" alt="image" src="https://github.com/user-attachments/assets/0d3fb2b5-5f4a-40f7-ae21-114bd7be771d" />
+
+
 
 ---
 
@@ -71,6 +79,12 @@ Add a new **Text** object for each chore on your list.
 For each text box, update the **Name** property so it is clear which box is which (e.g. `Text_Bed`, `Text_Pet`).
 
 <!-- Screenshot: Layout with list of chore text boxes, properties panel showing Name field -->
+
+<img width="235" height="208" alt="image" src="https://github.com/user-attachments/assets/1fe17a25-d77d-4a92-a378-dece0c30b994" />
+
+<img width="590" height="172" alt="image" src="https://github.com/user-attachments/assets/db10bd16-4d42-446a-8e3b-513ebcb28d1c" />
+
+
 
 ---
 
@@ -91,6 +105,15 @@ For each text box, update the **Name** property so it is clear which box is whic
 3. Rename it to: **Checkbox_Bed**
 
 <!-- Screenshot: Button placed next to chore text, properties panel showing Name and Text -->
+
+<img width="573" height="306" alt="image" src="https://github.com/user-attachments/assets/8ede3bef-0915-4e0c-adc7-589ac4bae247" />
+
+<img width="581" height="176" alt="image" src="https://github.com/user-attachments/assets/56083e7f-a802-45c8-92dd-24b39138dc39" />
+
+<img width="1021" height="237" alt="image" src="https://github.com/user-attachments/assets/00855123-18f0-4d4a-858f-390063486118" />
+
+
+
 
 ---
 
@@ -115,6 +138,13 @@ This makes the checkbox show a tick when clicked.
 
 <!-- Screenshot: Event sheet showing On clicked → Set text event -->
 
+<img width="1044" height="62" alt="image" src="https://github.com/user-attachments/assets/c7a35ea8-9d08-4114-897f-e6149b1fc9a5" />
+
+
+
+
+
+
 ---
 
 # **7. Repeat for Each Chore**
@@ -124,6 +154,9 @@ Repeat **Steps 5 and 6** for every chore in your list.
 Make sure each button has a unique **Name** (e.g. `Checkbox_Pet`, `Checkbox_Homework`) and that each event uses the matching checkbox.
 
 <!-- Screenshot: Event sheet with multiple On clicked events, one per checkbox -->
+
+<img width="1078" height="315" alt="image" src="https://github.com/user-attachments/assets/1c18e94c-c65d-43c5-8ec6-2d84df846b74" />
+
 
 ---
 
