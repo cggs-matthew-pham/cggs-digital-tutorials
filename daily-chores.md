@@ -178,3 +178,69 @@ Try one or more of these extensions:
 - Add a **Reset** button that clears all ticks
 - Show a message when all chores are done
 - Make the tick **toggle off** when the checkbox is clicked again
+
+- ---
+
+# **10. Extension: Toggle the Tick Off**
+
+Right now, clicking a completed chore does nothing — the tick stays. Let's make the checkbox **toggle**: click once to tick, click again to untick.
+
+There are two ways to do this. Try the first one to get it working, then try the second to understand what's happening under the hood.
+
+## **Option A: Use the Button's Checkbox Type**
+
+Construct 3's Button object has a built-in checkbox mode.
+
+1. Click a checkbox button (e.g. `Button_Bed`)
+2. In **Properties → Type**, change **Push button** to **Checkbox**
+3. The button now shows a native checkbox that ticks and unticks automatically
+4. In the event sheet, replace **On clicked** with **On checked** / **On unchecked** if you want to trigger other actions
+
+This is quick, but the toggle logic is hidden inside the button. You can't see *how* it works.
+
+<!-- Screenshot: Button properties panel with Type set to Checkbox -->
+
+<img width="595" height="176" alt="image" src="https://github.com/user-attachments/assets/104a79ee-af63-43a1-b885-87e98166c035" />
+
+## **Option B: Sub-events and Else (Recommended)**
+
+This approach shows the toggle logic explicitly in the event sheet. It also introduces two important tools: **sub-events** and **Else**.
+
+### **The Problem With Two Flat Events**
+
+You might try writing the toggle like this:
+Button_Bed On clicked + Text is "⬜"  →  Set text to "✅"
+Button_Bed On clicked + Text is "✅"  →  Set text to "⬜"
+
+This doesn't work. On one click, **both events run**: the first sets text to ✅, then the second immediately sees ✅ and sets it back to ⬜. Nothing visibly changes.
+
+### **The Fix: One Trigger, Two Branches**
+
+We want one trigger (`On clicked`) with two possible outcomes — only one should run per click.
+
+1. Create an event with just the trigger: `Button_Bed On clicked` (no conditions)
+2. Select the event and press **S** to add a **sub-event**
+3. In the sub-event, add condition `Button_Bed Text is "⬜"` and action `Set text to "✅"`
+4. Select the sub-event and press **X** to add an **Else** sub-event
+5. In the Else, add action `Set text to "⬜"`
+
+Your event should look like this:
+Button_Bed On clicked
+└─ Button_Bed Text is "⬜"  → Set text to "✅"
+└─ Else                     → Set text to "⬜"
+
+Now each click fires the trigger once, and only one branch runs. Repeat for each chore button.
+
+<!-- Screenshot: Event sheet showing sub-event with Else structure -->
+<img width="1041" height="279" alt="image" src="https://github.com/user-attachments/assets/5f763ea4-680c-4983-a1f3-c68f0c54e5a3" />
+
+
+### **Shortcut Keys**
+
+- **S** = Add sub-event
+- **B** = Add blank sub-event (no condition)
+- **X** = Add Else
+
+### **Why Option B Is Worth Learning**
+
+Option A works, but Option B teaches you how toggle behaviour is actually built. Every time you use a "smart" feature in a tool, code like this is running underneath. Knowing how to write it yourself means you can build toggle behaviour for things that *don't* have a built-in mode — animations, colour changes, showing and hiding elements, anything.
