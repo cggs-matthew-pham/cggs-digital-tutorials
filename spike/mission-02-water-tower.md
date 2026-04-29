@@ -1,0 +1,94 @@
+# Mission 02 — Water Tower (Obstacle Detection)
+
+## What you're building
+
+Your robot will stop when it detects an obstacle close in front of it — representing a water tower it needs to deliver to. You'll add a distance sensor and restructure your main loop to check for obstacles first, then line follow if the path is clear.
+
+---
+
+## What you need
+
+- Everything from Mission 01
+- Distance sensor connected to port **C** (pointing forward)
+
+---
+
+## Step 1 — Read the distance sensor
+
+Inside your `forever` loop, after the light reading, add:
+
+- `set distance to (distance sensor C) distance in cm`
+
+This stores the current distance reading each loop.
+
+> **Why cm?** It gives you a human-readable number to work with. 10 cm is roughly a hand-width — close enough to mean "obstacle right in front."
+
+---
+
+## Step 2 — Create the `water tower` MyBlock
+
+Create a new MyBlock called **water tower**. Inside it, add just one block:
+
+- `stop moving`
+
+> **Why a MyBlock?** Right now the water tower just stops. Later you might want it to do more — flash a light, wait, then reverse. Putting it in a MyBlock means you only change the code in one place.
+
+---
+
+## Step 3 — Create the `line follow` MyBlock
+
+Move your existing `if light > 60` steering logic (including the wait) into a new MyBlock called **line follow**.
+
+Your `line follow` MyBlock should contain:
+```
+if light > 60 then
+  start moving left: -60
+else
+  start moving right: 60
+  wait 0.5 seconds
+```
+
+> **Why move it to a MyBlock?** Your main loop is about to get more decisions. Keeping each behaviour in its own named block makes the main loop readable at a glance.
+
+---
+
+## Step 4 — Update the main loop
+
+Replace the old steering logic in your `forever` loop with:
+
+```
+if distance < 10 then
+  water tower
+else
+  line follow
+```
+
+> **Why check distance first?** The obstacle is more urgent than the line. If you checked the line first, the robot might steer itself into the obstacle before the distance check ran.
+
+---
+
+## Expected result
+
+```
+When Program Starts
+  set movement motors to A+B
+  set movement speed to 20%
+  forever
+    set light to [E] reflected light
+    set distance to [C] distance in cm
+    if distance < 10 then
+      water tower
+    else
+      line follow
+```
+
+---
+
+## Test it ✓
+
+1. Run your line-following test from Mission 01 — it should still work exactly the same.
+2. While the robot is line following, place your hand in front of the distance sensor.
+3. The robot should stop.
+4. Remove your hand — it should resume line following.
+
+**If it stops too early or too late:** adjust the `10 cm` threshold to suit your sensor and environment.
