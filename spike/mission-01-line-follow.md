@@ -25,6 +25,8 @@ Add these blocks under **When Program Starts**:
 
 > **Why 20%?** It's slow enough that your sensor readings have time to respond. Faster speeds mean the robot overshoots the line before it can correct.
 
+<img width="262" height="158" alt="image" src="https://github.com/user-attachments/assets/005054a6-60e5-41e8-b26d-8ae02f710df6" />
+
 ---
 
 ## Step 2 — Read the light sensor in a loop
@@ -40,6 +42,9 @@ This stores the current light reading into a variable called `light` each time t
 > **Why store it in a variable?** It makes your code easier to read — you use the word `light` instead of repeating the sensor block everywhere. Also, whenever you run a Spike Prime program, the current value of all variables is automatically tracked and displayed, which makes debugging much easier.
 
 > **Why a `forever` loop?** This is the core of how the robot works. Rather than running a sequence of steps once, the loop keeps checking the sensor and reacting — over and over, many times per second. This allows the robot to respond to changing conditions in real time. As your program grows, all your sensor reading and decision-making will live inside this loop.
+
+<img width="304" height="247" alt="image" src="https://github.com/user-attachments/assets/d74db580-91d4-43f3-8ed8-9c1d3dd9b707" />
+
 
 ---
 
@@ -74,6 +79,11 @@ When Program Starts
       start moving right: 60
       wait 0.5 seconds
 ```
+<img width="332" height="322" alt="image" src="https://github.com/user-attachments/assets/7f853658-e3c1-450c-816f-7f8f8d6c14d9" />
+
+<img width="312" height="292" alt="image" src="https://github.com/user-attachments/assets/bbaf745c-f308-4209-a7a1-e1e2d6bb5ee6" />
+
+
 
 ---
 
