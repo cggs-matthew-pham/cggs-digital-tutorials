@@ -15,6 +15,8 @@ Your robot will stop when it detects an obstacle close in front of it — repres
 
 ## Step 1 — Read the distance sensor
 
+First, create a new variable called **distance**.
+
 Inside your `forever` loop, after the light reading, add:
 
 - `set distance to (distance sensor C) distance in cm`
@@ -48,7 +50,7 @@ else
   wait 0.5 seconds
 ```
 
-> **Why move it to a MyBlock?** Your main loop is about to get more decisions. Keeping each behaviour in its own named block makes the main loop readable at a glance.
+> **Why move it to a MyBlock?** Your main loop is about to get more decisions. Keeping each behaviour in its own named block makes the main loop readable at a glance. This is the beginning of a pattern you'll build on — each MyBlock represents one mode of behaviour, and the main loop decides which mode to run.
 
 ---
 
@@ -63,7 +65,7 @@ else
   line follow
 ```
 
-> **Why check distance first?** The obstacle is more urgent than the line. If you checked the line first, the robot might steer itself into the obstacle before the distance check ran.
+> **Why check distance first?** The obstacle is more urgent than the line. If you checked the line first, the robot might steer itself into the obstacle before the distance check ran. Priority order matters — and by calling named MyBlocks rather than writing everything inline, it's easy to read what the robot will do in each situation.
 
 ---
 

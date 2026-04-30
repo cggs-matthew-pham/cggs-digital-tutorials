@@ -20,7 +20,7 @@ The SPIKE Prime hub has a built-in timer that starts counting from 0 when the pr
 - `reset timer` — set it back to 0
 - `when timer > X` — a hat block that fires once the timer exceeds X seconds
 
-> **Important:** `when timer > X` is an event block, like a button press. It fires independently of your main loop — you don't need to check it inside `forever`.
+> **Important:** `when timer > X` is an event block, like a button press. It fires independently of your main loop — you don't need to check it inside `forever`. This means the timer can trigger events without pausing or interrupting your sensor-based loop. The robot keeps reading sensors and reacting while the timer runs in the background — another benefit of the forever loop + modes pattern over a sequential approach.
 
 ---
 
@@ -49,7 +49,7 @@ when timer > 5
 
 That's it. When the timer exceeds 5 seconds, autonomous mode turns off automatically.
 
-> **Why is this so simple?** The `when timer > X` block handles the waiting for you — you don't need a loop or a counter. The hub checks the timer in the background and triggers this stack when the condition is met.
+> **Why is this so simple?** The `when timer > X` block handles the waiting for you — you don't need a loop or a counter. The hub checks the timer in the background and triggers this stack when the condition is met, without blocking anything else.
 
 ---
 

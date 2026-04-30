@@ -13,6 +13,18 @@ You'll add the ability to turn autonomous (self-driving) mode on and off using t
 
 ---
 
+## A new way of thinking about your program
+
+So far your robot has run continuously from the moment the program starts. But real robots need to handle multiple situations — following a line, stopping at obstacles, responding to colour, and now responding to a human operator.
+
+One approach is to write a long sequence: do this, then this, then this. This feels simple at first but breaks down quickly — while the robot is waiting on a timed step in a sequence, it can't respond to sensors. Students who tried this last year found it worked for simple cases, but as complexity grew it became very difficult to have the robot follow a preprogrammed route *and* respond to live sensor events at the same time.
+
+The approach we've been building toward is different: the `forever` loop keeps running and reading sensors on every iteration, and a **mode variable** controls *what the robot does with those readings*. Switching modes is just changing a number — the sensing never stops.
+
+This mission makes the mode pattern explicit.
+
+---
+
 ## Step 1 — Create the `autonomous mode` variable
 
 Create a new variable called **autonomous mode**.
@@ -35,7 +47,7 @@ Add two new hat blocks (these sit separately from your main stack):
 **When Right button pressed:**
 - `set autonomous mode to 1`
 
-> **Why use separate event blocks instead of checking buttons inside the loop?** Button presses can happen at any time — even while the robot is mid-movement. Event blocks respond immediately, regardless of where the main loop is up to. Checking inside the loop would mean the button only registers when the loop reaches that point.
+> **Why use separate event blocks instead of checking buttons inside the loop?** Button presses can happen at any time — even while the robot is mid-movement. Event blocks respond immediately, regardless of where the main loop is up to. Checking inside the loop would mean the button only registers when the loop reaches that point. This is also what makes the mode pattern powerful: the event block changes the variable instantly, and the very next loop iteration picks up the change.
 
 ---
 
@@ -52,7 +64,9 @@ else
   stop moving
 ```
 
-> **Why put the mode check in a MyBlock?** Your main loop just calls `run autonomous mode` — it doesn't need to know the details. If you later want to add more states (e.g. mode 2 = manual control), you only update this one MyBlock.
+> **Why a MyBlock for the mode check?** The main loop just calls `run autonomous mode` and doesn't need to know what's inside it. This is the same function-calling-function pattern from missions 2 and 3 — each MyBlock handles one layer, calling the next layer down. The benefit grows as your program gets more complex: to add a new mode, you add a new MyBlock and insert it into the chain. To remove one, you take it out. The rest of the program doesn't change.
+
+> **Why no `else if`?** Word Blocks only has `if / else`, not `else if`. The function-calling-function pattern is our way of achieving multiple modes cleanly without nesting `if` blocks inside `if` blocks, which becomes very hard to read and debug.
 
 ---
 
@@ -68,7 +82,7 @@ forever
   run autonomous mode
 ```
 
-`run autonomous mode` now handles everything: if mode is 1, it checks obstacles and colour and line follows; if mode is 0, it stops.
+`run autonomous mode` now handles everything: if mode is 1, it passes control to `yellow square`, which checks colour and falls through to `line follow`; if mode is 0, it stops.
 
 ---
 

@@ -15,6 +15,8 @@ Your robot will recognise a yellow square on the floor and perform a special act
 
 ## Step 1 — Read the colour
 
+First, create a new variable called **colour**.
+
 Inside your `forever` loop, after the distance reading, add:
 
 - `set colour to (colour sensor E) colour`
@@ -36,10 +38,10 @@ if [E] is colour (yellow) then
   start moving right: 20
   wait 0.5 seconds
 else
-  water tower
+  line follow
 ```
 
-> **Why check colour again inside the MyBlock?** The MyBlock is called every loop, but you only want the yellow square *behaviour* to run if yellow is actually detected. The else branch hands off to `water tower` (obstacle stop) if it turns out the colour wasn't yellow after all — acting as a fallback.
+> **Why check colour inside the MyBlock?** The MyBlock is called every loop iteration, but you only want the yellow square *behaviour* to run if yellow is actually detected. If it's not yellow, it falls through to `line follow` — so yellow square is the middle layer: colour event above, line following below.
 
 > **Why move right briefly after the wait?** This nudges the robot off the yellow square so it doesn't detect yellow again on the very next loop and repeat the behaviour endlessly.
 
@@ -47,19 +49,7 @@ else
 
 ## Step 3 — Update the main loop
 
-Add a call to `yellow square` in your `forever` loop. Your main loop now reads sensors and then decides:
-
-```
-forever
-  set light to [E] reflected light
-  set distance to [C] distance in cm
-  set colour to [E] colour
-  yellow square
-```
-
-Wait — this always calls `yellow square` now. You need to restructure slightly. The `yellow square` MyBlock handles its own colour check internally, so this works, but consider the order of priority: obstacle > yellow square > line follow.
-
-Restructure the main loop as:
+Your main loop now reads all three sensors and then calls `yellow square`, which handles the rest:
 
 ```
 forever
@@ -69,25 +59,10 @@ forever
   if distance < 10 then
     water tower
   else
-    yellow square   ← yellow square now contains the colour check and falls back to water tower / line follow
+    yellow square
 ```
 
-Actually, make `yellow square` the middle layer:
-
-```
-define yellow square
-  if [E] is colour yellow then
-    stop moving
-    write Hello
-    wait 2 seconds
-    turn on (full brightness)
-    start moving right: 20
-    wait 0.5 seconds
-  else
-    line follow      ← fall through to line following if not yellow
-```
-
-> **Why have yellow square fall through to line follow?** It means your main loop stays clean: check distance first (urgent), then check colour (special event), then line follow (default). Each MyBlock only needs to know about the next layer down.
+> **Why have yellow square call line follow internally?** This is a deliberate pattern: each MyBlock calls the next layer down. `water tower` handles obstacles. `yellow square` handles colour events, then falls through to `line follow` as the default. The main loop only needs to know about the top layer — it stays clean and readable no matter how many behaviours you add.
 
 ---
 

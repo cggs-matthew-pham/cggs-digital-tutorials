@@ -17,6 +17,8 @@ The built-in timer block fires once when a threshold is crossed. If you want som
 - Everything from Mission 05
 - A new variable: **timer count**
 
+Create the **timer count** variable before you begin.
+
 ---
 
 ## Step 1 — Set up timer count
@@ -27,7 +29,7 @@ In your **When Right button pressed** block, add:
 
 (alongside the existing `set autonomous mode to 1`)
 
-> **Why reset to 0 here?** Each time the robot activates, you want the countdown to start fresh from zero.
+> **Why reset to 0 here?** Each time the robot activates, you want the countdown to start fresh from zero. Because `timer count` is a variable, you'll also be able to watch it update live on the hub display as the program runs.
 
 ---
 
@@ -41,7 +43,7 @@ when timer > 1
   reset timer
 ```
 
-> **Why reset the timer to 1 instead of 5?** You're no longer waiting for a single 5-second event. Instead, you reset every 1 second — creating a repeating pulse. Each time the timer exceeds 1 second, `timer tick` runs and the clock resets, so it fires again after another second.
+> **Why reset the timer to 1 instead of 5?** You're no longer waiting for a single 5-second event. Instead, you reset every 1 second — creating a repeating pulse. Each time the timer exceeds 1 second, `timer tick` runs and the clock resets, so it fires again after another second. This event fires independently of the forever loop, just like the button events — the robot keeps sensing and reacting while the ticks happen in the background.
 
 ---
 
@@ -64,7 +66,7 @@ Breaking this down:
 
 > **Why increment first, then check?** If you checked first, on tick 1 the count would still be 0 — you'd never reach your threshold accurately. Incrementing first means tick 1 → count = 1, tick 5 → count = 5, tick 6 → count = 6 and the condition fires.
 
-> **Why use a MyBlock?** Keeping the tick logic separate means you can easily change what happens each second — add a sound, change the light colour, anything — without touching the timer structure.
+> **Why use a MyBlock?** Keeping the tick logic separate means you can easily change what happens each second — add a sound, change the light colour, anything — without touching the timer structure. It also fits the same function-calling-function pattern used throughout: each named block handles one responsibility.
 
 ---
 

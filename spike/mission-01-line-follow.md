@@ -29,13 +29,17 @@ Add these blocks under **When Program Starts**:
 
 ## Step 2 — Read the light sensor in a loop
 
+First, create a new variable called **light**.
+
 Add a `forever` loop. Inside it, add:
 
 - `set light to (colour sensor E) reflected light`
 
 This stores the current light reading into a variable called `light` each time the loop runs.
 
-> **Why store it in a variable?** It makes your code easier to read — you use the word `light` instead of repeating the sensor block everywhere.
+> **Why store it in a variable?** It makes your code easier to read — you use the word `light` instead of repeating the sensor block everywhere. Also, whenever you run a Spike Prime program, the current value of all variables is automatically tracked and displayed, which makes debugging much easier.
+
+> **Why a `forever` loop?** This is the core of how the robot works. Rather than running a sequence of steps once, the loop keeps checking the sensor and reacting — over and over, many times per second. This allows the robot to respond to changing conditions in real time. As your program grows, all your sensor reading and decision-making will live inside this loop.
 
 ---
 
@@ -50,13 +54,13 @@ Still inside the `forever` loop, add an `if / else` block:
 
 Add a `wait 0.5 seconds` after the else branch (inside the else, after the move block).
 
-> **Why the wait?** Without a small pause, the robot switches direction so rapidly it barely moves. The wait gives each steering correction a moment to take effect.
+> **Why the wait?** Without the pause, the robot loses its direction too easily — it switches so fast it never properly straddles the edge. The pause gives the rightward correction time to work, making it more forgiving when getting back onto the black line, especially on tight corners. The `right: 60` speed is also intentional — the deliberate aggressive zig-zag handles tight corners better than trying to move smoothly at a lower speed.
+
+> **Why not use a timer here?** A short fixed `wait` is the right tool for a brief, predictable pause like this. Timer blocks are better suited to longer autonomous run durations — that's what missions 5 and 6 cover.
 
 ---
 
 ## Expected result
-
-Your program should look like this:
 
 ```
 When Program Starts
@@ -79,6 +83,6 @@ When Program Starts
 2. Start the program.
 3. The robot should wobble along the line — steering left when it sees white, right when it sees black (or vice versa depending on which side you start on).
 
-**If it spins in one direction constantly:** your threshold may be off — try printing the `light` value to the hub display to see what readings you're actually getting.
+**If it spins in one direction constantly:** your threshold may be off — the variable display will show your live `light` readings to help you calibrate.
 
 **If it moves but doesn't follow the line:** check the sensor is close enough to the floor and pointing straight down.
