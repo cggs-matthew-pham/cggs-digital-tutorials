@@ -6,7 +6,7 @@
 
 > **Layout selected → Properties panel → Event sheet → select correct sheet**
 
-![](images/screenshot-event-sheet-link.png)
+<img width="425" height="244" alt="image" src="https://github.com/user-attachments/assets/5cbc07ae-5ea6-4850-9ba6-9220daa2fbcd" />
 *Layout Properties showing Event sheet dropdown*
 
 ---
@@ -17,7 +17,7 @@ Every event is a **trigger** + one or more **actions**.
 
 > *"When this happens → do this"*
 
-![](images/screenshot-event-sheet-overview.png)
+<img width="976" height="138" alt="image" src="https://github.com/user-attachments/assets/766ef094-ff6f-45ac-9f27-71be77602da7" />
 *Event sheet showing trigger on left, actions indented on right*
 
 **Common Triggers**
@@ -51,7 +51,8 @@ ButtonName   On clicked
   → System: Go to layout → Layout 2
 ```
 
-![](images/screenshot-navigation-event.png)
+<img width="973" height="73" alt="image" src="https://github.com/user-attachments/assets/0b56b9ad-1987-4afb-82c0-7c253a6ce6d1" />
+
 *On clicked with Go to layout action*
 
 ---
@@ -65,7 +66,8 @@ ButtonName   On clicked
 | `CurrentValue` | Text | `""` |
 | `HoursPracticed` | Number | `0` |
 
-![](images/screenshot-global-variable.png)
+<img width="405" height="61" alt="image" src="https://github.com/user-attachments/assets/d72d5802-f3ef-4d0b-97cc-d6470d76a8e8" />
+
 *Global variable declaration at top of event sheet*
 
 > Global variables are accessible across **all layouts**.
@@ -84,7 +86,8 @@ ButtonIntegrity   On clicked
   → System: Go to layout → Layout 2
 ```
 
-![](images/screenshot-set-text-variable.png)
+<img width="984" height="156" alt="image" src="https://github.com/user-attachments/assets/2117e9a9-6e72-43ed-adce-0e5b39e8abae" />
+
 *Set value action with a text string*
 
 **Display it using `&` to join text:**
@@ -94,7 +97,7 @@ TextDisplay   Set text
   "You selected: " & CurrentValue
 ```
 
-![](images/screenshot-concatenation.png)
+<img width="978" height="99" alt="image" src="https://github.com/user-attachments/assets/00ee9fcd-4099-495e-8707-70cbc123881d" />
 *Set text action with & joining literal text and a variable*
 
 > Literal text goes in `" "` — variables and expressions do not.
@@ -112,9 +115,8 @@ ButtonSave   On clicked
      "You have practiced for " & HoursPracticed & " hours"
 ```
 
-![](images/screenshot-number-variable-update.png)
+<img width="985" height="179" alt="image" src="https://github.com/user-attachments/assets/da9cba3e-f9e2-4f2f-973a-4995bb81f4d4" />
 *Add to variable + Set text in the same event*
-
 > `TextInput.Text` is always a string. Wrap in `int()` before doing maths.
 
 **Update the display in the same event as the variable change.**
