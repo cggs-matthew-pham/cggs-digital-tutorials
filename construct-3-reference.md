@@ -137,9 +137,14 @@ System   On start of layout
 ```
 
 ![](images/screenshot-on-start-layout.png)
+
+<img width="984" height="156" alt="image" src="https://github.com/user-attachments/assets/2117e9a9-6e72-43ed-adce-0e5b39e8abae" />
+
+<img width="985" height="78" alt="image" src="https://github.com/user-attachments/assets/5fdac384-3d7d-4a91-878d-cfeeffb4d303" />
+
 *Two On start of layout events — update instructions, clear input field*
 
-> Each use case is a **separate** event.
+> In the above example, each use case is a **separate** event. You can choose to combine them all into one event or separate it, the choice is up to you.
 
 ---
 
@@ -153,7 +158,7 @@ System   HoursPracticed ≥ 10
   → SpriteGreatWork: Set visible
 ```
 
-![](images/screenshot-compare-variable.png)
+<img width="995" height="86" alt="image" src="https://github.com/user-attachments/assets/74dbba85-883d-4cec-b61e-66960c7bd010" />
 *Compare variable condition + Set visible action*
 
 ---
@@ -170,7 +175,8 @@ Button_Bed   On clicked
 
 `S` = sub-event · `X` = Else · `B` = blank sub-event
 
-![](images/screenshot-toggle-subevent.png)
+<img width="1041" height="279" alt="image" src="https://github.com/user-attachments/assets/8d500e06-bdda-4aea-a938-702317770c7a" />
+
 *On clicked with sub-event + Else branch*
 
 ---
@@ -179,7 +185,10 @@ Button_Bed   On clicked
 
 **Insert New Object → Array** → Width: `0`, Height: `1`, Depth: `1`
 
-![](images/screenshot-array-properties.png)
+<img width="900" height="260" alt="image" src="https://github.com/user-attachments/assets/f0c09a61-1d8d-4277-adf4-e55293ef3e8d" />
+<img width="426" height="199" alt="image" src="https://github.com/user-attachments/assets/bdace442-910a-4444-b2e3-4cf2e0175bc9" />
+
+
 *Array properties — Width 0 starts empty, grows at runtime*
 
 ```
@@ -188,7 +197,8 @@ ButtonSave   On clicked
      Value: CurrentValue & ": " & TextInput.Text   Axis: X
 ```
 
-![](images/screenshot-array-push.png)
+<img width="978" height="75" alt="image" src="https://github.com/user-attachments/assets/ece1aebc-4e2f-4b3d-ab53-94b3de39d125" />
+
 *Push action — Back, value expression, X axis*
 
 ---
@@ -206,7 +216,8 @@ System   On start of layout
   → List: Add item  [ArrayJournal.At(loopindex)]
 ```
 
-![](images/screenshot-array-display.png)
+<img width="981" height="173" alt="image" src="https://github.com/user-attachments/assets/24a3492b-30d9-4d0c-a89b-aea131828b29" />
+
 *Clear event, then separate Repeat + Add item event*
 
 > `loopindex` counts from 0 up to `ArrayJournal.Width - 1`.
