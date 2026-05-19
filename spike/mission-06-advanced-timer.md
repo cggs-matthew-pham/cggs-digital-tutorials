@@ -29,31 +29,20 @@ In your **When Right button pressed** block, add:
 
 (alongside the existing `set autonomous mode to 1`)
 
+<img width="263" height="161" alt="image" src="https://github.com/user-attachments/assets/b910bd09-5d72-4bf2-8390-095fef3c2d53" />
+
+
 > **Why reset to 0 here?** Each time the robot activates, you want the countdown to start fresh from zero. Because `timer count` is a variable, you'll also be able to watch it update live on the hub display as the program runs.
 
----
-
-## Step 2 — Create the repeating 1-second tick
-
-Add a new hat block:
-
-```
-when timer > 1
-  timer tick
-  reset timer
-```
-
-> **Why reset the timer to 1 instead of 5?** You're no longer waiting for a single 5-second event. Instead, you reset every 1 second — creating a repeating pulse. Each time the timer exceeds 1 second, `timer tick` runs and the clock resets, so it fires again after another second. This event fires independently of the forever loop, just like the button events — the robot keeps sensing and reacting while the ticks happen in the background.
 
 ---
 
-## Step 3 — Create the `timer tick` MyBlock
+## Step 2 — Create the `timer tick` MyBlock
 
 Create a new MyBlock called **timer tick**. Inside it:
 
 ```
-set timer count to (timer count + 1)
-write timer count
+change timer count by 1
 if timer count > 5 then
   set autonomous mode to 0
 ```
@@ -70,18 +59,24 @@ Breaking this down:
 
 ---
 
-## Removing the old `when timer > 5` block
+## Step 3 — Create the repeating 1-second tick
 
-You no longer need the simple timer block from Mission 05:
+Edit the when `timer > 5 block`:
 
 ```
-when timer > 5       ← delete this
-  set autonomous mode to 0
+when timer > 1
+  timer tick
+  reset timer
 ```
 
-The `timer tick` MyBlock now handles the 5-second cutoff via the counter.
+<img width="245" height="206" alt="image" src="https://github.com/user-attachments/assets/77f2f801-19bb-4cb9-b258-aae6289021ca" />
+
+
+> **Why reset the timer to 1 instead of 5?** You're no longer waiting for a single 5-second event. Instead, you reset every 1 second — creating a repeating pulse. Each time the timer exceeds 1 second, `timer tick` runs and the clock resets, so it fires again after another second. This event fires independently of the forever loop, just like the button events — the robot keeps sensing and reacting while the ticks happen in the background.
 
 ---
+
+
 
 ## Expected result
 
@@ -101,6 +96,7 @@ define timer tick
   if timer count > 5 then
     set autonomous mode to 0
 ```
+<img width="1068" height="846" alt="image" src="https://github.com/user-attachments/assets/c6c9dc91-427f-408c-b740-7303b876f66f" />
 
 ---
 
