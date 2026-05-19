@@ -25,7 +25,8 @@ This stores the current distance reading each loop.
 
 > **Why cm?** It gives you a human-readable number to work with. 10 cm is roughly a hand-width — close enough to mean "obstacle right in front."
 
-<img width="397" height="323" alt="image" src="https://github.com/user-attachments/assets/43060a5b-b695-4e84-96e7-144eaa78c65f" />
+<img width="399" height="439" alt="image" src="https://github.com/user-attachments/assets/27788be0-1107-4545-aae4-5658f05e01ca" />
+
 
 
 ---
@@ -76,7 +77,8 @@ else
   line follow
 ```
 
-<img width="834" height="418" alt="image" src="https://github.com/user-attachments/assets/3bdee09b-de6c-442c-987a-97732c05fc2b" />
+<img width="846" height="446" alt="image" src="https://github.com/user-attachments/assets/f2c3b805-e86f-4b1d-913f-a64ecb708f69" />
+
 
 
 > **Why check distance first?** The obstacle is more urgent than the line. If you checked the line first, the robot might steer itself into the obstacle before the distance check ran. Priority order matters — and by calling named MyBlocks rather than writing everything inline, it's easy to read what the robot will do in each situation.
