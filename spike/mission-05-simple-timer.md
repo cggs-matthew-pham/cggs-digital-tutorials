@@ -34,6 +34,9 @@ When Right button pressed
   reset timer
 ```
 
+<img width="264" height="131" alt="image" src="https://github.com/user-attachments/assets/fd99ffe8-08d0-4992-b287-57bd05b9afc2" />
+
+
 > **Why reset here?** You want the 5-second countdown to start from the moment the robot is activated, not from when the program started. Resetting on button press gives you a fresh count each time.
 
 ---
@@ -67,7 +70,13 @@ when timer > 5
   set autonomous mode to 0
 ```
 
+<img width="535" height="139" alt="image" src="https://github.com/user-attachments/assets/ae8d16d2-6a7e-49d0-bff3-c84241b4d617" />
+
+
 The main loop and all other code stays the same.
+
+<img width="1081" height="813" alt="image" src="https://github.com/user-attachments/assets/66481fd8-a4a7-4088-b300-ec055d80a5a5" />
+
 
 ---
 
