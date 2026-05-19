@@ -1,4 +1,4 @@
-# Mission 02 — Water Tower (Obstacle Detection)
+<img width="834" height="418" alt="image" src="https://github.com/user-attachments/assets/f7ef7193-0163-4349-98e4-b6b15f8259e3" /># Mission 02 — Water Tower (Obstacle Detection)
 
 ## What you're building
 
@@ -25,6 +25,9 @@ This stores the current distance reading each loop.
 
 > **Why cm?** It gives you a human-readable number to work with. 10 cm is roughly a hand-width — close enough to mean "obstacle right in front."
 
+<img width="397" height="323" alt="image" src="https://github.com/user-attachments/assets/43060a5b-b695-4e84-96e7-144eaa78c65f" />
+
+
 ---
 
 ## Step 2 — Create the `water tower` MyBlock
@@ -32,6 +35,9 @@ This stores the current distance reading each loop.
 Create a new MyBlock called **water tower**. Inside it, add just one block:
 
 - `stop moving`
+
+<img width="180" height="133" alt="image" src="https://github.com/user-attachments/assets/4fd3485b-975c-45dd-a37c-291da563fffd" />
+
 
 > **Why a MyBlock?** Right now the water tower just stops. Later you might want it to do more — flash a light, wait, then reverse. Putting it in a MyBlock means you only change the code in one place.
 
@@ -50,7 +56,12 @@ else
   wait 0.5 seconds
 ```
 
+<img width="216" height="281" alt="image" src="https://github.com/user-attachments/assets/cbbc4556-84de-43b3-a0ca-5c7f2a911ba9" />
+
 > **Why move it to a MyBlock?** Your main loop is about to get more decisions. Keeping each behaviour in its own named block makes the main loop readable at a glance. This is the beginning of a pattern you'll build on — each MyBlock represents one mode of behaviour, and the main loop decides which mode to run.
+
+
+ 
 
 ---
 
@@ -64,6 +75,9 @@ if distance < 10 then
 else
   line follow
 ```
+
+<img width="834" height="418" alt="image" src="https://github.com/user-attachments/assets/3bdee09b-de6c-442c-987a-97732c05fc2b" />
+
 
 > **Why check distance first?** The obstacle is more urgent than the line. If you checked the line first, the robot might steer itself into the obstacle before the distance check ran. Priority order matters — and by calling named MyBlocks rather than writing everything inline, it's easy to read what the robot will do in each situation.
 
