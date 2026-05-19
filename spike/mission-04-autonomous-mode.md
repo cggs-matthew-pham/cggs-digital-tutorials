@@ -33,6 +33,9 @@ In your **When Program Starts** block, add:
 
 - `set autonomous mode to 0`
 
+<img width="370" height="368" alt="image" src="https://github.com/user-attachments/assets/7d63dbf9-fa61-42ad-ba5c-2c78895ff4aa" />
+
+
 > **Why start at 0?** We're using 0 to mean "off" (stopped) and 1 to mean "on" (running). Starting at 0 means the robot waits for you to deliberately activate it — it won't just take off the moment you press play.
 
 ---
@@ -47,6 +50,9 @@ Add two new hat blocks (these sit separately from your main stack):
 **When Right button pressed:**
 - `set autonomous mode to 1`
 
+<img width="571" height="137" alt="image" src="https://github.com/user-attachments/assets/3c5d2f73-814a-4bee-9bf1-798dfe5a48ed" />
+
+
 > **Why use separate event blocks instead of checking buttons inside the loop?** Button presses can happen at any time — even while the robot is mid-movement. Event blocks respond immediately, regardless of where the main loop is up to. Checking inside the loop would mean the button only registers when the loop reaches that point. This is also what makes the mode pattern powerful: the event block changes the variable instantly, and the very next loop iteration picks up the change.
 
 ---
@@ -58,11 +64,14 @@ Create a new MyBlock called **run autonomous mode**. Inside it:
 ```
 if autonomous mode = 1 then
   turn on (full brightness)
-  yellow square
+  [drag if block with water tower and yellow square here]
 else
   turn on (dim / off pattern)
   stop moving
 ```
+
+<img width="299" height="413" alt="image" src="https://github.com/user-attachments/assets/706ff9f6-a41d-45e2-992f-651d8567f9e1" />
+
 
 > **Why a MyBlock for the mode check?** The main loop just calls `run autonomous mode` and doesn't need to know what's inside it. This is the same function-calling-function pattern from missions 2 and 3 — each MyBlock handles one layer, calling the next layer down. The benefit grows as your program gets more complex: to add a new mode, you add a new MyBlock and insert it into the chain. To remove one, you take it out. The rest of the program doesn't change.
 
@@ -81,6 +90,9 @@ forever
   set colour to [E] colour
   run autonomous mode
 ```
+
+<img width="1071" height="801" alt="image" src="https://github.com/user-attachments/assets/b634e13a-875f-48e8-b3bb-b4b314c4d583" />
+
 
 `run autonomous mode` now handles everything: if mode is 1, it passes control to `yellow square`, which checks colour and falls through to `line follow`; if mode is 0, it stops.
 
