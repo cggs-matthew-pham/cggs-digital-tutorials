@@ -1,4 +1,4 @@
-<img width="834" height="418" alt="image" src="https://github.com/user-attachments/assets/f7ef7193-0163-4349-98e4-b6b15f8259e3" /># Mission 02 — Water Tower (Obstacle Detection)
+# Mission 02 — Water Tower (Obstacle Detection)
 
 ## What you're building
 
