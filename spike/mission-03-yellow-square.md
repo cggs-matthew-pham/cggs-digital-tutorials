@@ -21,6 +21,9 @@ Inside your `forever` loop, after the distance reading, add:
 
 - `set colour to (colour sensor E) colour`
 
+<img width="355" height="331" alt="image" src="https://github.com/user-attachments/assets/a6dc4e29-c0ff-45e1-afcd-9abb23455cde" />
+
+
 > **Why store colour separately?** You're already storing `light` (reflected brightness). Colour is a different reading from the same sensor — it tells you *what colour* rather than *how bright*. Storing both lets you use each independently.
 
 ---
@@ -35,15 +38,18 @@ if [E] is colour (yellow) then
   write Hello
   wait 2 seconds
   turn on (full brightness)
-  start moving right: 20
+  start moving
   wait 0.5 seconds
 else
   line follow
 ```
 
+<img width="277" height="422" alt="image" src="https://github.com/user-attachments/assets/93ac6144-a431-4aac-89c0-2a6c2cab4901" />
+
+
 > **Why check colour inside the MyBlock?** The MyBlock is called every loop iteration, but you only want the yellow square *behaviour* to run if yellow is actually detected. If it's not yellow, it falls through to `line follow` — so yellow square is the middle layer: colour event above, line following below.
 
-> **Why move right briefly after the wait?** This nudges the robot off the yellow square so it doesn't detect yellow again on the very next loop and repeat the behaviour endlessly.
+> **Why move briefly after the wait?** This moves the robot past the yellow square so it doesn't detect yellow again on the very next loop and repeat the behaviour endlessly.
 
 ---
 
@@ -61,6 +67,9 @@ forever
   else
     yellow square
 ```
+
+<img width="1079" height="480" alt="image" src="https://github.com/user-attachments/assets/bc2fd95c-4c67-48e2-8005-56be92e70d1e" />
+
 
 > **Why have yellow square call line follow internally?** This is a deliberate pattern: each MyBlock calls the next layer down. `water tower` handles obstacles. `yellow square` handles colour events, then falls through to `line follow` as the default. The main loop only needs to know about the top layer — it stays clean and readable no matter how many behaviours you add.
 
