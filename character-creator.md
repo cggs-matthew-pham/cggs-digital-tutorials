@@ -82,6 +82,8 @@ You're going to create **one** sprite object with three animation frames — one
 4. Rename the sprite to **SpriteDino**
 5. Resize to roughly **120 × 120**
 
+<img width="500" height="500" alt="T-Rex" src="https://github.com/user-attachments/assets/356ca42a-dbd0-438d-b306-e8d5a0bcf360" />
+
 > **Tip:** Keep the art simple — a coloured silhouette or placeholder rectangle works fine. You can upgrade the art later.
 
 ---
@@ -94,6 +96,14 @@ You're going to create **one** sprite object with three animation frames — one
 4. Right-click → **Add frame** again
 5. Draw or import an image for the **Pterodactyl** (frame 2)
 6. Close the image editor
+
+<img width="500" height="500" alt="Velociraptor" src="https://github.com/user-attachments/assets/09890b37-8f36-4d7c-8fdb-e75abc3cc07f" />
+
+<img width="500" height="500" alt="Pterodactyl" src="https://github.com/user-attachments/assets/9f264fe8-ead4-49f1-a5fd-011dda51b6ab" />
+
+
+
+
 
 You should now have three frames:
 
