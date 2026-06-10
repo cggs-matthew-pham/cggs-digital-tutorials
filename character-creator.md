@@ -10,10 +10,9 @@ Students understand how objects, instances, and instance variables work in Const
 
 ## **Success Criteria**
 
-✔ I can create a sprite with multiple animation frames to represent different characters.  
-✔ I can add instance variables to a sprite and set different values for each instance.  
-✔ I can use layers to switch between screens without changing layouts.  
-✔ I can scale a progress bar sprite based on a data value.  
+✔ I can create a sprite with multiple animation frames to represent different characters.
+✔ I can add instance variables to a sprite and set different values for each instance.
+✔ I can scale a progress bar sprite based on a data value.
 ✔ I can explain what "object type," "instance," and "instance variable" mean.
 
 ---
@@ -39,16 +38,7 @@ Students understand how objects, instances, and instance variables work in Const
 
 ---
 
-## **3. Rename the Layer**
-
-1. In the **Layers** panel (right side), double-click **Layer 0**
-2. Rename it to **Selection**
-
-<!-- SCREENSHOT: Layers panel showing "Selection" -->
-
----
-
-## **4. Add Title and Subtitle**
+## **3. Add Title and Subtitle**
 
 **Title:**
 1. Right-click layout → **Insert New Object** → **Text**
@@ -72,12 +62,11 @@ Students understand how objects, instances, and instance variables work in Const
 
 # **Part 2: Dinosaur Sprite and Animation Frames**
 
-You're going to create **one** sprite object with three animation frames — one frame per dinosaur. Then you'll place **three instances** of that sprite on the layout. Each instance will show a different frame.
+You're going to create **one** sprite object with three animation frames, one frame per dinosaur. Then you'll place **three instances** of that sprite on the layout. Each instance will show a different frame.
 
-## **5. Create the SpriteDino Object**
+## **4. Create the SpriteDino Object**
 
 1. Right-click layout → **Insert New Object** → **Sprite**
-
 2. The image editor opens. Draw or import an image for the **T-Rex** (this will be frame 0)
 3. Close the image editor
 4. Rename the sprite to **SpriteDino**
@@ -85,11 +74,11 @@ You're going to create **one** sprite object with three animation frames — one
 
 <img width="500" height="500" alt="T-Rex" src="https://github.com/user-attachments/assets/356ca42a-dbd0-438d-b306-e8d5a0bcf360" />
 
-> **Tip:** Keep the art simple — a coloured silhouette or placeholder rectangle works fine. You can upgrade the art later.
+> **Tip:** Keep the art simple. A coloured silhouette or placeholder rectangle works fine. You can upgrade the art later.
 
 ---
 
-## **6. Add Animation Frames**
+## **5. Add Animation Frames**
 
 1. Double-click **SpriteDino** to reopen the image editor
 2. In the **Animation Frames** panel (bottom), right-click → **Add frame**
@@ -102,10 +91,6 @@ You're going to create **one** sprite object with three animation frames — one
 
 <img width="500" height="500" alt="Pterodactyl" src="https://github.com/user-attachments/assets/9f264fe8-ead4-49f1-a5fd-011dda51b6ab" />
 
-
-
-
-
 You should now have three frames:
 
 | Frame | Dinosaur |
@@ -114,12 +99,11 @@ You should now have three frames:
 | 1 | Velociraptor |
 | 2 | Pterodactyl |
 
-<img width="334" height="162" alt="image" src="https://github.com/user-attachments/assets/bb9c089a-ac0c-4c1b-b6a1-aac82b9076f3" />
-
+<img width="334" height="162" alt="Animation frames panel" src="https://github.com/user-attachments/assets/bb9c089a-ac0c-4c1b-b6a1-aac82b9076f3" />
 
 ---
 
-## **7. Set Animation Speed to 0**
+## **6. Set Animation Speed to 0**
 
 You don't want the sprite cycling through frames automatically.
 
@@ -127,14 +111,13 @@ You don't want the sprite cycling through frames automatically.
 2. In Properties, find **Animations** → click to expand
 3. Set **Speed** to **0**
 
-<img width="950" height="530" alt="anim_speed_0" src="https://github.com/user-attachments/assets/1a4ffa8d-b0e8-4959-918d-924f7aa6471e" />
-
+<img width="950" height="530" alt="Animation speed set to 0" src="https://github.com/user-attachments/assets/1a4ffa8d-b0e8-4959-918d-924f7aa6471e" />
 
 ---
 
-## **8. Place Three Instances**
+## **7. Place Three Instances**
 
-1. You already have one instance on the layout (frame 0 — T-Rex). Position it on the left side, below the subtitle.
+1. You already have one instance on the layout (frame 0, T-Rex). Position it on the left side, below the subtitle.
 2. **Copy and paste** the sprite twice (Ctrl+C, Ctrl+V) to create two more instances
 3. Position all three in a row with space between them
 4. Select the **middle** instance → in Properties, set **Initial frame** to **1**
@@ -142,14 +125,11 @@ You don't want the sprite cycling through frames automatically.
 
 You should now see three different dinosaurs side by side.
 
-<!-- SCREENSHOT: Three SpriteDino instances showing different frames in a row -->
-<img width="827" height="218" alt="image" src="https://github.com/user-attachments/assets/dc606af6-83ee-4d0e-8794-e20df82f6041" />
-
-
+<img width="827" height="218" alt="Three SpriteDino instances" src="https://github.com/user-attachments/assets/dc606af6-83ee-4d0e-8794-e20df82f6041" />
 
 ---
 
-## **9. Add Name Labels**
+## **8. Add Name Labels**
 
 Add a text label below each dinosaur so players know what they're clicking.
 
@@ -165,8 +145,7 @@ Add a text label below each dinosaur so players know what they're clicking.
    - Text: "Pterodactyl"
    - Position below the third dinosaur
 
-<!-- SCREENSHOT: Three dinosaurs with name labels underneath -->
-<img width="872" height="269" alt="image" src="https://github.com/user-attachments/assets/972c2304-d8c0-4673-b91c-31c6a6f984f6" />
+<img width="872" height="269" alt="Three dinosaurs with labels" src="https://github.com/user-attachments/assets/972c2304-d8c0-4663-b91c-31c6a6f984f6" />
 
 ---
 
@@ -174,9 +153,9 @@ Add a text label below each dinosaur so players know what they're clicking.
 
 This is the key concept. You're going to add **instance variables** to the SpriteDino object type. Every instance shares the same variable *names*, but each instance holds its own *values*.
 
-> **Think of it this way:** SpriteDino is like a template (in programming, this is called a *class*). Each dinosaur on the layout is an *instance* — a specific copy with its own data. The instance variables are *properties* that describe each one.
+> **Think of it this way:** SpriteDino is like a template (in programming, this is called a *class*). Each dinosaur on the layout is an *instance*, a specific copy with its own data. The instance variables are *properties* that describe each one.
 
-## **10. Add Instance Variables**
+## **9. Add Instance Variables**
 
 1. Select any **SpriteDino** instance on the layout
 2. In Properties, find **Instance variables** → click **Add**
@@ -186,28 +165,24 @@ This is the key concept. You're going to add **instance variables** to the Sprit
 |---|---|---|
 | dinoName | Text | Display name |
 | tier | Text | Tier ranking (S, A, B, etc.) |
-| attack | Number | Attack stat (0–100) |
-| defense | Number | Defense stat (0–100) |
-| hp | Number | Hit points stat (0–100) |
-| speed | Number | Speed stat (0–100) |
+| attack | Number | Attack stat (0-100) |
+| defense | Number | Defense stat (0-100) |
+| hp | Number | Hit points stat (0-100) |
+| speed | Number | Speed stat (0-100) |
 | ability | Text | Special ability |
 | weakness | Text | Main weakness |
 
-<!-- SCREENSHOT: Instance variables dialog showing the list -->
+> **Note:** You add instance variables to the *object type*, not individual instances. All three dinosaurs will now have these variables. You just need to fill in different values for each.
 
-> **Note:** You add instance variables to the *object type*, not individual instances. All three dinosaurs will now have these variables — you just need to fill in different values for each.
+<img width="950" height="530" alt="Instance variables setup" src="https://github.com/user-attachments/assets/5f90a9a1-5c8b-41c2-9314-e26d85fec6d8" />
 
-<img width="950" height="530" alt="anim_initial_frame" src="https://github.com/user-attachments/assets/5f90a9a1-5c8b-41c2-9314-e26d85fec6d8" />
-
-
-<img width="723" height="523" alt="image" src="https://github.com/user-attachments/assets/5b6e8d83-a639-4176-9d98-d36d3cd0f8bd" />
-
+<img width="723" height="523" alt="Instance variables list" src="https://github.com/user-attachments/assets/5b6e8d83-a639-4176-9d98-d36d3cd0f8bd" />
 
 ---
 
-## **11. Set T-Rex Values**
+## **10. Set T-Rex Values**
 
-1. Click the **first** SpriteDino instance (frame 0 — T-Rex) on the layout
+1. Click the **first** SpriteDino instance (frame 0, T-Rex) on the layout
 2. In Properties, under Instance variables, set:
 
 | Variable | Value |
@@ -218,17 +193,14 @@ This is the key concept. You're going to add **instance variables** to the Sprit
 | defense | 80 |
 | hp | 90 |
 | speed | 40 |
-| ability | Bone Crusher — bite shatters armour |
+| ability | Bone Crusher: bite shatters armour |
 | weakness | Tiny arms, slow turning radius |
 
-<!-- SCREENSHOT: Properties panel showing T-Rex instance variable values -->
-
-<img width="552" height="448" alt="image" src="https://github.com/user-attachments/assets/84c3e877-aedd-4b04-951d-a9cc775ed6a7" />
-
+<img width="552" height="448" alt="T-Rex instance variable values" src="https://github.com/user-attachments/assets/84c3e877-aedd-4b04-951d-a9cc775ed6a7" />
 
 ---
 
-## **12. Set Velociraptor Values**
+## **11. Set Velociraptor Values**
 
 1. Click the **second** SpriteDino instance (frame 1)
 2. Set instance variables:
@@ -241,15 +213,14 @@ This is the key concept. You're going to add **instance variables** to the Sprit
 | defense | 35 |
 | hp | 30 |
 | speed | 90 |
-| ability | Pack Tactics — damage scales with nearby allies |
+| ability | Pack Tactics: damage scales with nearby allies |
 | weakness | Turkey-sized, fragile |
 
-<img width="549" height="441" alt="image" src="https://github.com/user-attachments/assets/a60c7146-822a-4338-97b5-38d6f13bc7c9" />
-
+<img width="549" height="441" alt="Velociraptor instance variable values" src="https://github.com/user-attachments/assets/a60c7146-822a-4338-97b5-38d6f13bc7c9" />
 
 ---
 
-## **13. Set Pterodactyl Values**
+## **12. Set Pterodactyl Values**
 
 1. Click the **third** SpriteDino instance (frame 2)
 2. Set instance variables:
@@ -262,66 +233,51 @@ This is the key concept. You're going to add **instance variables** to the Sprit
 | defense | 25 |
 | hp | 35 |
 | speed | 95 |
-| ability | Dive Bomb — high-speed aerial strike |
+| ability | Dive Bomb: high-speed aerial strike |
 | weakness | Helpless on ground, weak up close |
 
-<img width="524" height="438" alt="image" src="https://github.com/user-attachments/assets/674da2d0-20e6-4a3b-abb8-246263e39c79" />
-
-
----
-
-# **Part 4: Stats Display Layer**
-
-Now you'll build the screen that shows a dinosaur's stats. This will be on a **separate layer** that starts hidden.
-
-## **14. Create the Stats Layer**
-
-1. In the **Layers** panel, click the **+** button to add a new layer
-2. Rename it to **Stats**
-3. In Properties, set **Initially visible** to **No**
-
-> **Why layers instead of layouts?** Layers keep everything on one layout. This means the SpriteDino instances and their instance variables stay accessible — you can read their data directly without copying it elsewhere.
-
-<!-- SCREENSHOT: Layers panel showing Selection and Stats layers, Stats set to invisible -->
+<img width="524" height="438" alt="Pterodactyl instance variable values" src="https://github.com/user-attachments/assets/674da2d0-20e6-4a3b-abb8-246263e39c79" />
 
 ---
 
-## **15. Add the Dinosaur Name and Tier**
+# **Part 4: Stats Display**
 
-Make sure **Stats** is the active layer (selected in the Layers panel) before inserting objects.
+Now you'll build the area that shows a dinosaur's stats. This sits below the dinosaur selection row on the same layout. When you click a dinosaur, the stats update to show that dinosaur's data.
+
+## **13. Add the Dinosaur Name and Tier**
 
 1. Insert a **Text** object → rename to **TextDinoName**
-   - Text: "Dinosaur Name"
+   - Text: "Choose a dinosaur"
    - Font size: 28, bold
-   - Position at the top of the layout
+   - Position below the name labels, with some space separating it from the selection row
 
 2. Insert a **Text** object → rename to **TextTier**
-   - Text: "Tier: —"
+   - Text: ""
    - Font size: 20
    - Position below the name
 
 ---
 
-## **16. Add Stat Labels**
+## **14. Add Stat Labels**
 
 Insert four **Text** objects for the stat labels. Position them in a column on the left side:
 
 | Object Name | Text | Position |
 |---|---|---|
-| TextStatAttack | "Attack: 0" | Below tier |
-| TextStatDefense | "Defense: 0" | Below attack |
-| TextStatHP | "HP: 0" | Below defense |
-| TextStatSpeed | "Speed: 0" | Below HP |
+| TextStatAttack | "" | Below tier |
+| TextStatDefense | "" | Below attack |
+| TextStatHP | "" | Below defense |
+| TextStatSpeed | "" | Below HP |
 
 Set each to font size **14**.
 
-<!-- SCREENSHOT: Stats layer with name, tier, and four stat labels stacked -->
+> **Why start with empty text?** Before the player clicks anything, the stats area should look clean. The text gets filled in by the event sheet when a dinosaur is selected.
 
 ---
 
-## **17. Add Stat Bars**
+## **15. Add Stat Bars**
 
-This uses the same technique as the progress bar in the Water Tracker — a coloured sprite whose width scales to match a data value.
+This uses a coloured sprite whose width scales to match a data value.
 
 ### **Bar backgrounds**
 
@@ -359,35 +315,35 @@ You need a **separate object type** for each stat bar, because each one will be 
    - Size: **200 × 16**
    - Position on the fourth BarBG
 
+### **Hide the bars until a dinosaur is selected**
+
+Set the **initial width** of BarAttack, BarDefense, BarHP, and BarSpeed to **0** in their Properties. The bars will grow when the player clicks a dinosaur.
+
 <!-- SCREENSHOT: Four stat bars with coloured foregrounds on grey backgrounds -->
 
 ---
 
-## **18. Add Ability, Weakness, and Back Button**
+## **16. Add Ability and Weakness**
 
 1. Insert a **Text** object → rename to **TextAbility**
-   - Text: "Special: —"
+   - Text: ""
    - Font size: 14
    - Position below the stat bars
 
 2. Insert a **Text** object → rename to **TextWeakness**
-   - Text: "Weakness: —"
+   - Text: ""
    - Font size: 14
    - Position below ability
 
-3. Insert a **Button** → rename to **ButtonBack**
-   - Text: "← Back"
-   - Position at the bottom of the layout
-
-<!-- SCREENSHOT: Complete Stats layer showing all elements -->
+<!-- SCREENSHOT: Complete stats area showing all elements -->
 
 ---
 
-# **Part 5: Events — Dinosaur Selection**
+# **Part 5: Events**
 
 This is where instance variables show their power. When you click a SpriteDino instance, Construct 3 automatically knows *which* instance was clicked. You can read that specific instance's variables to populate the stats display.
 
-## **19. Add the Selection Event**
+## **17. Add the Selection Event**
 
 Open the **Event Sheet**.
 
@@ -416,82 +372,61 @@ Open the **Event Sheet**.
 | Set width | BarHP | Width | `SpriteDino.hp / 100 * 200` |
 | Set width | BarSpeed | Width | `SpriteDino.speed / 100 * 200` |
 
-### **Switch layers**
-
-| Action | Object | Property | Value |
-|---|---|---|---|
-| Set layer visible | System | Layer "Selection" | Invisible |
-| Set layer visible | System | Layer "Stats" | Visible |
-
-> **Why does `SpriteDino.attack` give the right value?** When you click an instance, Construct 3 "picks" that instance for the rest of the event. So `SpriteDino.attack` refers to the *clicked* dinosaur's attack — not all of them. This is instance-level data in action.
+> **Why does `SpriteDino.attack` give the right value?** When you click an instance, Construct 3 "picks" that instance for the rest of the event. So `SpriteDino.attack` refers to the *clicked* dinosaur's attack, not all of them. This is instance-level data in action.
 
 <!-- SCREENSHOT: Complete event with all actions listed -->
 
 ---
 
-# **Part 6: Events — Back Button**
-
-## **20. Add the Back Event**
-
-1. Add event → **ButtonBack** → **On clicked**
-2. Add actions:
-
-| Action | Object | Property | Value |
-|---|---|---|---|
-| Set layer visible | System | Layer "Stats" | Invisible |
-| Set layer visible | System | Layer "Selection" | Visible |
-
-<!-- SCREENSHOT: Back button event -->
-
----
-
-# **Part 7: Test Your App**
+# **Part 6: Test Your App**
 
 1. Press **F5** to run the project
-2. Click the **T-Rex** — you should see:
+2. The stats area should be empty (no text, no bars)
+3. Click the **T-Rex**. You should see:
    - Name: "T-Rex"
    - Tier: S
    - Attack bar nearly full (95%), speed bar less than half (40%)
-3. Click **← Back**
-4. Click the **Velociraptor** — stats should change:
+4. Click the **Velociraptor**. The stats should change:
    - Speed bar nearly full (90%), defense bar small (35%)
-5. Click **← Back**
-6. Click the **Pterodactyl** — different stats again
-7. Verify every dinosaur shows its own unique data
+5. Click the **Pterodactyl**. Different stats again
+6. Verify every dinosaur shows its own unique data
 
 <!-- GIF: Clicking through all three dinosaurs and seeing stats change -->
 
 ---
 
-# **Part 8: Extend the Dino Stats App**
+# **Part 7: Extend the Dino Stats App**
 
 Before starting the main challenge, try adding to your existing project:
 
 ### **Add more stats**
-Add `stealth` and `intelligence` instance variables to SpriteDino. Create new bar sprites and text labels on the Stats layer, then add actions to the click event.
+Add `stealth` and `intelligence` instance variables to SpriteDino. Create new bar sprites and text labels, then add actions to the click event.
 
 ### **Add a 4th dinosaur**
-Add a new animation frame, place a new instance, and fill in its instance variables. You shouldn't need to touch the event sheet at all — test it and see why.
+Add a new animation frame, place a new instance, and fill in its instance variables. You shouldn't need to touch the event sheet at all. Test it and see why.
 
 ### **Colour the tier badge**
-Add a **Sprite** called **SpriteTierBadge** on the Stats layer with animation frames for each tier colour (frame 0 = gold for S, frame 1 = red for A, frame 2 = blue for B). In the click event, set the frame based on the tier value.
+Add a **Sprite** called **SpriteTierBadge** with animation frames for each tier colour (frame 0 = gold for S, frame 1 = red for A, frame 2 = blue for B). In the click event, set the frame based on the tier value.
+
+### **Add layers for a full-screen stats view**
+Create a second layer called **Stats** and set it to initially invisible. Move the stats display elements onto this layer, add a Back button, and update the click event to hide the selection layer and show the stats layer. This gives each dinosaur a dedicated full-screen view.
 
 ---
 
-# **Part 9: Challenge — Build Your Own Character Creator**
+# **Part 8: Challenge — Build Your Own Character Creator**
 
 Now that you know the pattern, create your own character creator from scratch. Choose one of the categories below, or pitch your own idea to your teacher.
 
 ### **Option A: Fantasy / Mythical Creatures**
-Dragons, phoenixes, griffins, unicorns, krakens...  
+Dragons, phoenixes, griffins, unicorns, krakens...
 Example stats: Magic, Strength, Speed, Defence, Wisdom, Stealth
 
 ### **Option B: Celebrity / Artist / Athlete**
-Musicians, athletes, or performers with skill-based profiles.  
+Musicians, athletes, or performers with skill-based profiles.
 Example stats: Talent, Influence, Consistency, Versatility, Stamina, Creativity
 
 ### **Option C: Pet Breeds**
-Dog breeds, cat breeds, or a mix.  
+Dog breeds, cat breeds, or a mix.
 Example stats: Energy, Affection, Trainability, Independence, Chaos Factor, Fluffiness
 
 ### **Option D: Your Own Idea**
@@ -501,16 +436,15 @@ Any category where you can define at least 3 characters with meaningful stats. G
 
 - At least **3 characters** using a single sprite with animation frames and instance variables
 - At least **4 stats** displayed with scaled bars
-- A **selection screen** and a **stats screen** using layers
 - Each character must have a **special ability** and a **weakness**
-- Your stat values must be **justified** — be ready to explain why you gave each character those numbers
+- Your stat values must be **justified**. Be ready to explain why you gave each character those numbers.
 
 ### **Stretch goals**
 
 - Add a **comparison mode** that shows two characters side by side
-- Animate the stat bars using the **Tween** behaviour so they grow from 0 when the stats screen appears
+- Animate the stat bars using the **Tween** behaviour so they grow from 0 when a dinosaur is selected
 - Add a **tier ranking** system with colour-coded badges
-- Include **build options** — different ways to play or spec each character (like skill trees or loadouts)
+- Use **layers** to create a full-screen stats view with a back button
 
 ---
 
@@ -529,5 +463,5 @@ Any category where you can define at least 3 characters with meaningful stats. G
 
 - What is the difference between an *object type* and an *instance*?
 - Why did you use **instance variables** instead of global variables for the dinosaur data?
-- If you added a 4th dinosaur, what would you need to change in the event sheet? (Think carefully — the answer might surprise you.)
+- If you added a 4th dinosaur, what would you need to change in the event sheet? (Think carefully.)
 - How is this pattern similar to how apps like Pokédex or character select screens work in real games?
