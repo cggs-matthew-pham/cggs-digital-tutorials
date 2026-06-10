@@ -76,7 +76,8 @@ You're going to create **one** sprite object with three animation frames — one
 
 ## **5. Create the SpriteDino Object**
 
-1. Right-click layout → **Insert New Object** → **Sprite**
+1. Right-click layout → **Insert New Object** → **Sprite**<img width="1904" height="1065" alt="anim_speed_0" src="https://github.com/user-attachments/assets/24798ad7-b80a-4141-a337-61de89f0c8fd" />
+
 2. The image editor opens. Draw or import an image for the **T-Rex** (this will be frame 0)
 3. Close the image editor
 4. Rename the sprite to **SpriteDino**
@@ -113,6 +114,9 @@ You should now have three frames:
 | 1 | Velociraptor |
 | 2 | Pterodactyl |
 
+<img width="334" height="162" alt="image" src="https://github.com/user-attachments/assets/bb9c089a-ac0c-4c1b-b6a1-aac82b9076f3" />
+
+
 ---
 
 ## **7. Set Animation Speed to 0**
@@ -122,6 +126,9 @@ You don't want the sprite cycling through frames automatically.
 1. Select **SpriteDino** on the layout
 2. In Properties, find **Animations** → click to expand
 3. Set **Speed** to **0**
+
+<img width="1904" height="1065" alt="anim_speed_0" src="https://github.com/user-attachments/assets/1a4ffa8d-b0e8-4959-918d-924f7aa6471e" />
+
 
 ---
 
