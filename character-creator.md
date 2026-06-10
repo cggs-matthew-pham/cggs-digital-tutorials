@@ -127,7 +127,7 @@ You don't want the sprite cycling through frames automatically.
 2. In Properties, find **Animations** → click to expand
 3. Set **Speed** to **0**
 
-<img width="1904" height="1065" alt="anim_speed_0" src="https://github.com/user-attachments/assets/1a4ffa8d-b0e8-4959-918d-924f7aa6471e" />
+<img width="950" height="530" alt="anim_speed_0" src="https://github.com/user-attachments/assets/1a4ffa8d-b0e8-4959-918d-924f7aa6471e" />
 
 
 ---
