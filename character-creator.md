@@ -143,6 +143,9 @@ You don't want the sprite cycling through frames automatically.
 You should now see three different dinosaurs side by side.
 
 <!-- SCREENSHOT: Three SpriteDino instances showing different frames in a row -->
+<img width="827" height="218" alt="image" src="https://github.com/user-attachments/assets/dc606af6-83ee-4d0e-8794-e20df82f6041" />
+
+
 
 ---
 
@@ -163,6 +166,7 @@ Add a text label below each dinosaur so players know what they're clicking.
    - Position below the third dinosaur
 
 <!-- SCREENSHOT: Three dinosaurs with name labels underneath -->
+<img width="872" height="269" alt="image" src="https://github.com/user-attachments/assets/972c2304-d8c0-4673-b91c-31c6a6f984f6" />
 
 ---
 
@@ -193,6 +197,12 @@ This is the key concept. You're going to add **instance variables** to the Sprit
 
 > **Note:** You add instance variables to the *object type*, not individual instances. All three dinosaurs will now have these variables — you just need to fill in different values for each.
 
+<img width="950" height="530" alt="anim_initial_frame" src="https://github.com/user-attachments/assets/5f90a9a1-5c8b-41c2-9314-e26d85fec6d8" />
+
+
+<img width="723" height="523" alt="image" src="https://github.com/user-attachments/assets/5b6e8d83-a639-4176-9d98-d36d3cd0f8bd" />
+
+
 ---
 
 ## **11. Set T-Rex Values**
@@ -213,6 +223,9 @@ This is the key concept. You're going to add **instance variables** to the Sprit
 
 <!-- SCREENSHOT: Properties panel showing T-Rex instance variable values -->
 
+<img width="552" height="448" alt="image" src="https://github.com/user-attachments/assets/84c3e877-aedd-4b04-951d-a9cc775ed6a7" />
+
+
 ---
 
 ## **12. Set Velociraptor Values**
@@ -231,6 +244,9 @@ This is the key concept. You're going to add **instance variables** to the Sprit
 | ability | Pack Tactics — damage scales with nearby allies |
 | weakness | Turkey-sized, fragile |
 
+<img width="549" height="441" alt="image" src="https://github.com/user-attachments/assets/a60c7146-822a-4338-97b5-38d6f13bc7c9" />
+
+
 ---
 
 ## **13. Set Pterodactyl Values**
@@ -248,6 +264,9 @@ This is the key concept. You're going to add **instance variables** to the Sprit
 | speed | 95 |
 | ability | Dive Bomb — high-speed aerial strike |
 | weakness | Helpless on ground, weak up close |
+
+<img width="524" height="438" alt="image" src="https://github.com/user-attachments/assets/674da2d0-20e6-4a3b-abb8-246263e39c79" />
+
 
 ---
 
