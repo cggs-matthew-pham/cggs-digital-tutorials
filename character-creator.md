@@ -76,7 +76,7 @@ You're going to create **one** sprite object with three animation frames — one
 
 ## **5. Create the SpriteDino Object**
 
-1. Right-click layout → **Insert New Object** → **Sprite**<img width="1904" height="1065" alt="anim_speed_0" src="https://github.com/user-attachments/assets/24798ad7-b80a-4141-a337-61de89f0c8fd" />
+1. Right-click layout → **Insert New Object** → **Sprite**
 
 2. The image editor opens. Draw or import an image for the **T-Rex** (this will be frame 0)
 3. Close the image editor
