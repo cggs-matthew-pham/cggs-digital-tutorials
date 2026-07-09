@@ -11,7 +11,8 @@
 
 Double-click the robot (**Elephant Robotics myCo...**) in the station tree. The robot panel opens, showing Cartesian Jog controls at the top and **Joint axis jog** sliders at the bottom.
 
-<!-- screenshot: robot jog panel with joint sliders visible -->
+<img width="694" height="837" alt="image" src="https://github.com/user-attachments/assets/f810837e-c17a-4538-8a01-f0c72d39b987" />
+
 
 You'll see six sliders labelled **θ1** through **θ6** — one per joint. Each shows the current angle and its limits.
 
@@ -34,16 +35,16 @@ Try moving **θ1** to 30° and back to 0° to see the base swing. Then try **θ2
 
 Before teaching a target, make sure the **Reference Frame** dropdown (in the Cartesian Jog section) is set to **Work Area**. Targets are stored relative to whichever frame is active — using the wrong one means the target moves if the frame moves.
 
-<!-- screenshot: Reference Frame dropdown showing Work Area selected -->
+<img width="674" height="79" alt="image" src="https://github.com/user-attachments/assets/40f8184c-774c-4f74-ab1f-3bcb4162c90a" />
 
 ## 4. Teach your first target
 
-1. Jog the arm to a position where the gripper is over the work area — try **θ1 ≈ 20°**, **θ2 ≈ -25°**, **θ3 ≈ -66°** as a starting point.
+1. Click **Pick** in the station tree to snap the arm to that position. Now jog from there — try changing **θ1** by 90° (e.g. from 20° to 110°) to move to a nearby but distinct position.
 2. Go to **Program → Teach Target** (or press **Ctrl+T**).
 
 <!-- screenshot: Program menu with Teach Target highlighted -->
 
-3. A new target appears in the station tree under **Work Area**. Rename it (double-click the name or press **F2**) — call it something descriptive like `MyTarget1`.
+3. A new target appears in the station tree under **Work Area**. Rename it (double-click the name or press **F2**) — call it something descriptive like `Pick90`.
 
 <!-- screenshot: new target in station tree, renamed -->
 
@@ -51,8 +52,8 @@ Before teaching a target, make sure the **Reference Frame** dropdown (in the Car
 
 Repeat for two more targets:
 
-1. **A higher position** — keep θ1 the same, raise the arm by increasing θ2 (try -10°). Teach Target → rename `MyTarget2`. This could serve as an approach or retract pose.
-2. **A position to one side** — swing θ1 to about 60–70° so the base rotates. Teach Target → rename `MyTarget3`. This could be a "place" position.
+1. **A higher position** — keep θ1 the same, raise the arm by increasing θ2 (try -5°). Teach Target → rename `MyTarget2` to something like `Approach90`. This could serve as an approach or retract pose.
+2. **A position to one side** — swing θ1 another 60-70° so the base rotates (e.g. from 110° to 180°). Teach Target → rename `MyTarget3` to something like `Place90`. This could be a "place" position.
 
 You should now have three targets under Work Area, each at a different position.
 
