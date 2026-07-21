@@ -32,20 +32,7 @@ It helps test ideas before building the complete product.
 
 ---
 
-# **2. Sign Up for Construct 3**
-
-Go to: **https://editor.construct.net**
-
-1. Click **Register**
-2. Select **Sign in with Google**
-
-<img width="1300" height="304" alt="image" src="https://github.com/user-attachments/assets/3c6703ba-2ee9-4080-8dd0-1cfaf607ee57" />
-
-<img width="401" height="247" alt="image" src="https://github.com/user-attachments/assets/34529d87-cf1f-4ffc-b8b8-76aab56f7c9d" />
-
----
-
-# **3. Update Save & Backup Settings**
+# **2. Update Save & Backup Settings**
 
 Inside Construct 3:
 
@@ -64,7 +51,7 @@ _(You may be prompted to sign in with your Microsoft account.)_
 <img width="408" height="468" alt="image" src="https://github.com/user-attachments/assets/cd03da7f-ff03-45c4-9fb7-2600fa25ec7b" />
 
 ---
-# **4. Create a New Project**
+# **3. Create a New Project**
 
 1. Click **New**
 2. Project name: **Music Practice Tracker**
@@ -76,7 +63,7 @@ _(You may be prompted to sign in with your Microsoft account.)_
 
 ---
 
-# **5. Design the User Interface (UI)**
+# **4. Design the User Interface (UI)**
 
 On the **Layout** screen:
 
@@ -119,7 +106,7 @@ Optional: Adjust **size**, **alignment**, or other visual properties.
 
 ---
 
-# **6. Event Sheet – Adding Logic**
+# **5. Event Sheet – Adding Logic**
 
 Open the **Event Sheet**.
 
@@ -182,7 +169,7 @@ This makes the Save button store the number of hours and display the total.
 <img width="456" height="275" alt="image" src="https://github.com/user-attachments/assets/2da31d4f-96e6-4e3b-b8b2-296166552c84" />
 
 
-# **7. Add a "Great Work Animation" GIF**
+# **6. Add a "Great Work Animation" GIF**
 
 ### **Download and Insert the GIF**
 
