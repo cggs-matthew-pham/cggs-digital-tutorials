@@ -44,17 +44,17 @@ error.
 
 ```mermaid
 sequenceDiagram
-    participant Py as Your Python script
-    participant RDK as RoboDK (already open)
-    Py->>RDK: Robolink()
+    participant Py as Python script
+    participant RDK as RoboDK
+    Py->>RDK: connect
     RDK-->>Py: connected
-    Py->>RDK: robot.Joints()
+    Py->>RDK: request joints
     RDK-->>Py: six angles
-    Py->>RDK: robot.Pose()
-    RDK-->>Py: tool position and orientation
+    Py->>RDK: request pose
+    RDK-->>Py: position and orientation
 ```
 
-`Robolink()` connects to a RoboDK that's already open. It doesn't launch
+`Robolink()` connects to a RoboDK that's already open, it doesn't launch
 one. If RoboDK isn't running, this is the line where your script fails.
 
 ## Step 1: Connect
@@ -153,16 +153,20 @@ Run it. Now compare this to Step 2's joint angles.
 
 ## The one idea this tutorial exists to teach
 
+The arm has one physical position right now. Here are the two completely
+different ways to describe it:
+
 ```mermaid
 graph LR
-    A["The arm, right now,<br>one physical position"] --> B["Joints<br>J1 to J6, degrees<br><i>how far each motor turned</i>"]
-    A --> C["Pose<br>X Y Z RX RY RZ<br><i>where the tip is, which way it points</i>"]
+    A[One arm position] --> B[Joints: six angles]
+    A --> C[Pose: position and direction]
 ```
 
 Both are six numbers. Both describe the exact same arm, at the exact same
-moment. But they mean completely different things, and mixing them up is
-an easy mistake to make later, so it's worth being sure of the difference
-now.
+moment. Joints tell you how far each motor turned. Pose tells you where
+the tool tip is and which way it's pointing. They mean completely
+different things, and mixing them up is an easy mistake to make later, so
+it's worth being sure of the difference now.
 
 **Try this:** drag a joint slider in RoboDK, then run the whole script
 again. Both blocks of output should change. If only one does, something's
