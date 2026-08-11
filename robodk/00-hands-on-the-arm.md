@@ -1,9 +1,11 @@
 # Hands on the Arm: A First Look at RoboDK
 
-> Before we write a single line of Python, we're clicking around. This
-> tutorial is short on purpose: enough to see the arm respond to a human,
-> so that when Tutorial 01 starts typing code instead, you have something
-> real to compare it against.
+> You're building a robot that plays board games: it picks up a piece and
+> puts it exactly where a game needs it, square by square, move by move.
+> Everything in this arc is one app, growing. Today's job is the
+> smallest one: touch the arm by hand and see it move, before any of that
+> is code. This tutorial is short on purpose, just enough to have
+> something real to compare against once Tutorial 01 starts typing.
 
 ---
 
@@ -118,8 +120,8 @@ You didn't write that. Clicking built it.
   real Python.
 
 Clicking works. It also doesn't scale, imagine doing this for nine board
-squares by hand, then again if the board shifts two millimetres. That's
-exactly the problem Tutorial 01 onward solves: writing the *positions* as
-numbers in code instead of clicking them one at a time.
+squares by hand, then again if the board shifts two millimetres. Tutorial
+01 onward writes the *positions* as numbers in code instead, the same
+app, upgraded.
 
-**Next:** Tutorial 01, the same connect-and-read idea, in Python.
+**Next:** Tutorial 01, the arm's turn to tell you where it is.
