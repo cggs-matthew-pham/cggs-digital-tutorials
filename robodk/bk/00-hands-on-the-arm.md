@@ -5,7 +5,7 @@
 > Everything in this arc is one app, growing. Today's job is the
 > smallest one: touch the arm by hand and see it move, before any of that
 > is code. This tutorial is short on purpose, just enough to have
-> something real to compare against once Tutorial 02 starts typing.
+> something real to compare against once Tutorial 01 starts typing.
 
 ---
 
@@ -15,9 +15,8 @@
 - **Genuinely new:** nothing conceptual, this is orientation. The one idea
   worth naming out loud: everything here is *simulation*, the arm on
   screen, not physical hardware yet.
-- **No deliberate errors this tutorial.** The arc's first genuine
-  deliberate error is Tutorial 06, once there's enough real code for a
-  planted mistake to mean something.
+- **No deliberate errors this tutorial.** Save that pattern for Tutorial 01
+  onward, once code is involved.
 - **Verify before teaching:** confirm "Generate Robot Program" still
   produces pymycobot-flavoured output on the deployed RoboDK version. If
   the target vendor differs, the generated code sample below needs
@@ -57,7 +56,7 @@ rotation values.
 
 You didn't choose new joint angles. You typed *where you want the tool
 tip to be*, and the arm worked out the angles itself. Keep that feeling in
-mind, it's the whole point of Tutorial 02's second half.
+mind, it's the whole point of Tutorial 01's second half.
 
 ## Step 3: One thing to notice, not explain yet
 
@@ -71,36 +70,25 @@ Don't open it. Don't explain it. Just notice it's there. It'll matter a
 lot more a few tutorials from now, in a way that'll make more sense once
 you've hit the problem it solves.
 
-## Step 4: Create three targets, and name them
+## Step 4: Create two targets
 
-- Move the arm to a position you'll treat as a resting spot. Right-click
-  the robot → **Add Target**.
-- In the station tree, double-click the new target's name (it'll say
-  something like "Target 1") and rename it **Home**.
-- Move the arm somewhere else, **Add Target** again, rename this one
-  **Drop**.
-- Move the arm a third time, **Add Target** once more, rename this one
-  **Rotate**.
+- Right-click the robot → **Add Target**, at the arm's current position.
+- Move the arm somewhere else (drag a slider or edit a coordinate).
+- **Add Target** again.
 
-You now have three named targets in the station tree: Home, Drop,
-Rotate. The names matter, not just as labels, Tutorial 01 finds these
-targets by typing those exact names, so what you call them here is what
-you'll type there.
+You now have two targets in the station tree, two saved positions.
 
-> 📷 **Screenshot slot:** station tree showing all three targets,
-> renamed and visible: Home, Drop, Rotate.
+> 📷 **Screenshot slot:** station tree showing both targets, named and
+> visible.
 
-## Step 5: Build a four-move program
+## Step 5: Build a two-move program
 
 - Right-click the robot → **Add Program**.
-- Select the program, then select **Home** → click **Move Joint**.
-- Select **Drop** → click **Move Joint**.
-- Select **Rotate** → click **Move Joint**.
-- Select **Home** again → click **Move Joint**, coming back to where you
-  started.
-- Press play. The arm should move Home, Drop, Rotate, Home.
+- Select the program, then select Target 1 → click **Move Joint**.
+- Select Target 2 → click **Move Joint** again.
+- Press play. The arm should move between your two targets.
 
-> 📷 **Screenshot slot:** the program in the tree with all four move
+> 📷 **Screenshot slot:** the program in the tree with both move
 > instructions listed, play button visible.
 
 ## Step 6: Turn it into Python
@@ -112,32 +100,28 @@ Open the file it creates. Somewhere in there, you'll see something close
 to this:
 
 ```python
-home = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]          # your Home numbers here
-drop = [30.0, 0.0, -90.0, 0.0, 0.0, 0.0]       # your Drop numbers here
-rotate = [30.0, 0.0, -90.0, 0.0, 0.0, 90.0]    # your Rotate numbers here
+target_1 = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]      # your six numbers here
+target_2 = [30.0, 0.0, -90.0, 0.0, 0.0, 0.0]   # and here
 
-mc.send_angles(home, speed)
-mc.send_angles(drop, speed)
-mc.send_angles(rotate, speed)
-mc.send_angles(home, speed)
+mc.send_angles(target_1, speed)
+mc.send_angles(target_2, speed)
 ```
 
 You didn't write that. Clicking built it.
 
 > 📷 **Screenshot slot:** the generated file open in a text editor,
-> all four move commands visible.
+> the two move commands visible.
 
 ## What just happened
 
 - Two ways to move the arm by hand: joint by joint, or by typing a
   position and letting the arm solve the angles.
-- Three clicked, named targets became a real four-move program, and
-  that program became real Python.
+- Two clicked targets became a real program, and that program became
+  real Python.
 
 Clicking works. It also doesn't scale, imagine doing this for nine board
-squares by hand, then again if the board shifts two millimetres. Tutorial 01 onward writes the *positions* as numbers in code instead, the same
-app, upgraded, starting with the exact program you just clicked together,
-this time in Python.
+squares by hand, then again if the board shifts two millimetres. Tutorial
+01 onward writes the *positions* as numbers in code instead, the same
+app, upgraded.
 
-**Next:** Tutorial 01, the same Home, Drop, Rotate program, written not
-clicked.
+**Next:** Tutorial 01, the arm's turn to tell you where it is.

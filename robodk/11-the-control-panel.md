@@ -1,12 +1,16 @@
+---
+title: The Control Panel
+subtitle: "Tutorial 11, The Board Game Robot"
+---
+
 # The Control Panel
 
 > Editing constants and re-running a script works, but it's not how you'd
 > actually want to drive this cell. This tutorial builds a small window:
 > type a position, click a button, watch it happen.
 
----
-
-**Teacher note**
+<details>
+<summary>Teacher note</summary>
 
 - **Mode:** sync, whole class.
 - **Genuinely new:** separating *logic* (a function that takes plain
@@ -27,7 +31,7 @@
   from RoboDK's own interpreter before the lesson. If it's missing, this
   tutorial needs the system Python or a Gradio rewrite instead.
 
----
+</details>
 
 ## Before you start
 

@@ -1,12 +1,16 @@
+---
+title: Where Should the Board Go?
+subtitle: "Tutorial 10, The Board Game Robot"
+---
+
 # Where Should the Board Go?
 
 > Tutorial 09 patched one square. This tutorial finds a board position
 > where the problem doesn't happen anywhere, by testing candidates
 > properly instead of guessing.
 
----
-
-**Teacher note**
+<details>
+<summary>Teacher note</summary>
 
 - **Mode:** sync, likely its own full lesson. Denser than the rest of the
   arc; that density is deliberate, this is real engineering, not padding.
@@ -28,7 +32,7 @@
   it yourself before the lesson; if it fails, that becomes the lesson's
   best material, not a problem.
 
----
+</details>
 
 ## Before you start
 

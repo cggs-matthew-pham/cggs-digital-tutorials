@@ -1,3 +1,8 @@
+---
+title: Your Game
+subtitle: "Tutorial 12, The Board Game Robot"
+---
+
 # Your Game
 
 > Everything up to here is the body: an arm that can reach any square and
@@ -6,9 +11,8 @@
 > purpose. Then it's yours: configure the same cell into a game of your
 > choosing.
 
----
-
-**Teacher note**
+<details>
+<summary>Teacher note</summary>
 
 - **Mode:** sync for the worked example, then open, project-style for the
   ownership build. Budget more than one session for the second half.
@@ -22,7 +26,7 @@
   different skill from everything else in this arc.
 - **No deliberate error.** This tutorial is the payoff, not another trap.
 
----
+</details>
 
 ## Before you start
 
@@ -89,7 +93,7 @@ unbeatable, minimax is the extension, look it up once this works.
 
 Two housekeeping details first, both small but load-bearing:
 
-- The brain numbers squares 0 to 8 (list positions); Tutorial 04's
+- The brain numbers squares 0 to 8 (list positions); Tutorial 05's
   `square_xy` numbers them 1 to 9. Converting is `+ 1`, done once,
   visibly.
 - The robot needs to know which staging slot still has a piece. A counter
@@ -123,11 +127,9 @@ Tic-tac-toe is fully worked above. The cell itself, `move_piece(from,
 to)`, the board grid, the geometry, isn't tic-tac-toe-specific. Configure
 it into a game of your own:
 
-- Different board dimensions (`ORIGIN`, `PITCH`, board size in Tutorial
-  04 and 07).
+- Different board dimensions (`ORIGIN`, `PITCH`, board size in Tutorial 05 and 04).
 - Different piece shapes or rules.
-- A game that needs rearranging pieces, not just placing them, Tutorial
-  08's `move_piece` already supports it.
+- A game that needs rearranging pieces, not just placing them, Tutorial 08's `move_piece` already supports it.
 
 Document what you changed, and why the underlying cell didn't need to.
 

@@ -1,3 +1,8 @@
+---
+title: Down to the Surface
+subtitle: "Tutorial 07, The Board Game Robot"
+---
+
 # Down to the Surface
 
 > Every tutorial so far has stayed up at travel height. This one goes
@@ -5,9 +10,8 @@
 > *how* the arm moves between two points actually matters, not just where
 > it ends up.
 
----
-
-**Teacher note**
+<details>
+<summary>Teacher note</summary>
 
 - **Mode:** sync, whole class.
 - **Genuinely new:** `MoveL` (straight-line motion) as distinct from
@@ -21,11 +25,11 @@
   lesson. If it already fails here, Tutorial 09's cliffhanger doesn't
   land, students would have seen the failure two tutorials early.
 
----
+</details>
 
 ## Before you start
 
-RoboDK open, Tutorial 05's station, `ORIGIN_X` back to `90.0`.
+RoboDK open, Tutorial 06's station, `ORIGIN_X` back to `90.0`.
 
 ## Step 1: Two ways to move, and why it's a real choice
 
@@ -54,7 +58,7 @@ only for the short vertical hover-to-surface segments.
 
 ## Step 2: Hover, descend, lift
 
-Create a new file, `06_down_to_surface.py`. One script, one block.
+Create a new file, `07_down_to_surface.py`. One script, one block.
 
 **Before you look at the block below:** you've now typed the
 connect-and-home opening four times. Write it from memory first, the two
@@ -113,5 +117,5 @@ deliberately rather than interchangeably.
 **One thing worth sitting with:** this worked, on the centre square.
 Nothing here has proven it works everywhere on the board.
 
-**Next:** Tutorial 07, giving the board and pieces actual shape instead
-of invisible target points.
+**Next:** Tutorial 08, the full pick-and-place cycle, using the board
+and pieces you already built back in Tutorial 04.

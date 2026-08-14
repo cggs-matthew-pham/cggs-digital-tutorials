@@ -1,3 +1,8 @@
+---
+title: Check Before You Move
+subtitle: "Tutorial 06, The Board Game Robot"
+---
+
 # Check Before You Move
 
 > A typed position can describe a point the arm simply can't reach. A
@@ -5,9 +10,8 @@
 > it. This tutorial checks reachability before sending any motion, and
 > ships with a board position that fails on purpose.
 
----
-
-**Teacher note**
+<details>
+<summary>Teacher note</summary>
 
 - **Mode:** sync, whole class.
 - **Genuinely new:** `SolveIK` used to check without moving; reading a
@@ -16,23 +20,23 @@
   deliberately too large. On our test hardware this produced 6 of 9
   squares reachable, 3 unreachable (squares 7, 8, 9), a genuinely mixed
   result, not everything failing. Students fix the constant back to `90.0`
-  (Tutorial 04's value) and re-run to see all nine pass. This is a
-  separate, local bug from Tutorial 04's ORIGIN_X trap, don't conflate the
+  (Tutorial 05's value) and re-run to see all nine pass. This is a
+  separate, local bug from Tutorial 05's ORIGIN_X trap, don't conflate the
   two in discussion.
 - **Verify before teaching:** the specific squares that fail depend on
   arm geometry; confirm the split is genuinely mixed (not 0 or 9) on your
   install before the lesson, and adjust `ORIGIN_X` if needed to get a
   mixed result.
 
----
+</details>
 
 ## Before you start
 
-RoboDK open, Tutorial 04's station.
+RoboDK open, Tutorial 05's station.
 
 ## Step 1: Ship it broken, run it anyway
 
-Create a new file, `05_check_reach.py`. This tutorial is one script;
+Create a new file, `06_check_reach.py`. This tutorial is one script;
 Step 2 changes one constant in it, nothing more.
 
 ```python
@@ -114,5 +118,5 @@ A check that runs *before* motion, from a printed list, not by watching
 the arm fail or lurch toward the wrong place. `SolveIK` called on its own,
 with nothing following it, is the pattern: compute, don't commit.
 
-**Next:** Tutorial 06, going down to the board surface for the first
+**Next:** Tutorial 07, going down to the board surface for the first
 time, and the first real decision between two ways of moving.

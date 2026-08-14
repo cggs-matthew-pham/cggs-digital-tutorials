@@ -1,12 +1,16 @@
+---
+title: Pick It Up
+subtitle: "Tutorial 08, The Board Game Robot"
+---
+
 # Pick It Up
 
 > Hover, descend, grip, lift, travel, descend, release, lift. This
 > tutorial builds that cycle once, generically, so the same function can
 > place a new piece from staging or rearrange one already on the board.
 
----
-
-**Teacher note**
+<details>
+<summary>Teacher note</summary>
 
 - **Mode:** sync, whole class.
 - **Genuinely new:** `AttachClosest()` / `DetachAll()`, RoboDK's way of
@@ -16,17 +20,18 @@
   student-facing hint, it's a real error we hit building this arc. The
   fix: attach/detach must be called on a *tool* item, and this station
   doesn't have one yet, `robot.AddTool()` creates a placeholder. This pays
-  off Tutorial 01's "tool frame: none set" note, make that connection out
+  off Tutorial 02's "tool frame: none set" note, make that connection out
   loud once students have found the fix themselves.
 - **Verify before teaching:** confirm the exact error text on your RoboDK
   version; if it differs, the "read the error, don't guess" instruction
   still works but the exact wording in this file needs updating to match.
 
----
+</details>
 
 ## Before you start
 
-RoboDK open, Tutorial 07's station (board and pieces already built).
+RoboDK open, Tutorial 07's station. The board and pieces from
+Tutorial 04 should still be sitting there, untouched since.
 
 ## Step 1: Try it the obvious way, watch it fail
 
@@ -44,7 +49,7 @@ if not robot.Valid():
 
 HOVER_Z, GRIP_Z = 150.0, 109.0
 ORIENTATION = [180.0, 0.0, 0.0]
-STAGING_X, STAGING_Y = 100.0, -120.0    # slot 0, from Tutorial 07
+STAGING_X, STAGING_Y = 100.0, -120.0    # slot 0, from Tutorial 04
 
 def pose_at(x, y, z):
     return xyzrpw_2_pose([x, y, z] + ORIENTATION)
@@ -76,7 +81,7 @@ def get_or_add_tool(RDK, robot):
 
 A tool with zero offset from the flange is just a placeholder, enough for
 `AttachClosest`/`DetachAll` to have somewhere valid to work from. This is
-the same "tool frame: none set" gap Tutorial 01 flagged and set aside.
+the same "tool frame: none set" gap Tutorial 02 flagged and set aside.
 
 ## Step 3: The generic transfer cycle
 
@@ -130,7 +135,7 @@ flowchart LR
 ## Step 4: Run it
 
 Call `move_piece` between a staging position and a board square (using
-Tutorial 04's `square_xy` and Tutorial 07's staging positions). Confirm in
+Tutorial 05's `square_xy` and Tutorial 04's staging positions). Confirm in
 the 3D view: the piece should visibly leave staging and land on the
 board.
 

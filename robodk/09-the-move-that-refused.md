@@ -1,12 +1,16 @@
+---
+title: The Move That Refused
+subtitle: "Tutorial 09, The Board Game Robot"
+---
+
 # The Move That Refused
 
 > Everything has worked so far. This tutorial is the one where it stops
-> working, on purpose, using the exact board position Tutorial 04 handed
+> working, on purpose, using the exact board position Tutorial 05 handed
 > you and told you not to worry about yet.
 
----
-
-**Teacher note**
+<details>
+<summary>Teacher note</summary>
 
 - **Mode:** sync, whole class, ideally the full lesson. This is the arc's
   centrepiece, don't rush it.
@@ -26,7 +30,7 @@
   joint numbers are hardware-dependent; if they differ, use your real
   numbers instead of the ones below, do not fabricate matching ones.
 
----
+</details>
 
 ## Before you start
 
@@ -126,7 +130,7 @@ when both ends are individually fine.
 
 **One thing left unfixed on purpose:** swapping to `MoveJ` treats the
 symptom. The actual cause is that this board position sits close enough
-to the base to force the arm into an awkward reach. That's Tutorial 04's
+to the base to force the arm into an awkward reach. That's Tutorial 05's
 "we'll come back to this", and now you know exactly what "this" is.
 
 **Next:** Tutorial 10, finding a board position where this problem
