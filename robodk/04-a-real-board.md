@@ -52,10 +52,10 @@ robot = RDK.Item('', ITEM_TYPE_ROBOT)
 if not robot.Valid():
     raise Exception('No robot found. Load the myCobot 280 into the station.')
 
-OBJECT_NAMES = ['Board plate']
-for name in OBJECT_NAMES:
-    existing = RDK.Item(name)
-    if existing.Valid():
+OBJECT_NAMES = ['Board plate', 'Piece 0']   # Piece 0 doesn't exist yet,
+for name in OBJECT_NAMES:                    # Step 3 builds it. Listed
+    existing = RDK.Item(name)                # here now so reruns after
+    if existing.Valid():                     # Step 3 clean up both.
         existing.Delete()
 
 # A box has 6 flat faces. Each face is a rectangle, split into 2
