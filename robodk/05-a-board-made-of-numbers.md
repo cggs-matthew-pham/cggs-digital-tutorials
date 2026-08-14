@@ -87,13 +87,18 @@ Add this next, below what you have:
 ```python
 print('Visiting all nine squares.')
 for index in range(1, 10):
+    robot.MoveJ(home)
     robot.MoveJ(square_pose(index))
     print(f'  at square {index}')
 
 robot.MoveJ(home)
 ```
 
-Run it, watching the 3D view.
+Run it, watching the 3D view. Going home between every square, instead
+of straight from one square to the next, is deliberate: it turns nine
+positions computed from one formula into nine separate, visible
+landings, home, land, home, land, rather than one continuous sweep that
+could look like a single motion if you weren't counting.
 
 ```mermaid
 flowchart LR
