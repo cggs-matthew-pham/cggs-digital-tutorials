@@ -93,6 +93,9 @@ Works on Windows and Mac — steps that differ are labelled.
    `` Ctrl+` ``). This terminal automatically starts inside your project
    folder — no need to `cd` anywhere.
 
+<img width="511" height="822" alt="image" src="https://github.com/user-attachments/assets/4494ca24-e29d-44fb-ae77-217c311e01d4" />
+
+
 ---
 
 ## 5. Create a virtual environment (venv)
@@ -125,6 +128,9 @@ terminal prompt — that's confirmation it worked.
 > environment for the workspace?" — click **Yes**. This makes VS Code use
 > the venv automatically from then on.
 
+<img width="1380" height="330" alt="image" src="https://github.com/user-attachments/assets/b51d5c45-eb05-4925-be3d-185313d9c5fb" />
+
+
 ---
 
 ## 6. Install the requirements
@@ -137,10 +143,11 @@ pip install -r requirements.txt
 
 This downloads and installs everything the app needs. It can take a few
 minutes the first time — that's normal.
+<img width="1336" height="277" alt="image" src="https://github.com/user-attachments/assets/ef8d5a6b-977e-4340-a875-46226b74fabf" />
 
 ---
 
-## 7. Run the app
+## 7. Run one the example apps
 
 Still in the same terminal (with `(venv)` showing), run:
 
