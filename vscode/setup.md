@@ -20,12 +20,19 @@ Works on Windows and Mac — steps that differ are labelled.
 4. Open VS Code once to confirm it launches, then close it again — we'll
    come back to it after Python is installed.
 
+<img width="1889" height="724" alt="image" src="https://github.com/user-attachments/assets/e915138d-56e0-4d68-8426-c4d7438ae51b" />
+
+<img width="897" height="668" alt="image" src="https://github.com/user-attachments/assets/e5e714ee-dde5-4cd7-832f-f0e7be300905" />
+
+<img width="907" height="678" alt="image" src="https://github.com/user-attachments/assets/e53df687-c270-4d80-a4e0-1bff0522b3a7" />
+
+
 ---
 
 ## 2. Install Python
 
-1. Go to <https://www.python.org/downloads/>
-2. Download the latest **Python 3** installer for your OS.
+1. Go to [<https://www.python.org/downloads/>](https://www.python.org/downloads/release/python-3150rc1/)
+2. Download the version 3.13 **Python 3** installer for your OS 
 3. Run the installer.
    - **Windows — important:** on the first install screen, tick the box at
      the bottom that says **"Add python.exe to PATH"** *before* clicking
@@ -35,6 +42,9 @@ Works on Windows and Mac — steps that differ are labelled.
 4. Check it worked. Open:
    - **Windows:** the Start menu → type `cmd` → open Command Prompt
    - **Mac:** Spotlight (`Cmd+Space`) → type `terminal` → open Terminal
+  
+   <img width="1822" height="337" alt="image" src="https://github.com/user-attachments/assets/deed15c4-de2f-4432-b0ff-094a35204f31" />
+
 
    Then type:
 
