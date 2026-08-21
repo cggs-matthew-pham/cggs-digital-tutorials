@@ -32,14 +32,15 @@ Works on Windows and Mac — steps that differ are labelled.
 ## 2. Install Python
 
 1. Go to [<https://www.python.org/downloads/>](https://www.python.org/downloads/release/python-3150rc1/)
-2. Download the version 3.13 **Python 3** installer for your OS 
-3. Run the installer.
+2. For **Windows** if the Python install manager doesn't work, you can also download Python through the Microsoft Store
+3. Download the version 3.13 **Python 3** installer for your OS 
+4. Run the installer.
    - **Windows — important:** on the first install screen, tick the box at
      the bottom that says **"Add python.exe to PATH"** *before* clicking
      Install. If you miss this, Python won't be recognised in the terminal
      and you'll need to reinstall.
    - **Mac:** the default install options are fine.
-4. Check it worked. Open:
+5. Check it worked. Open:
    - **Windows:** the Start menu → type `cmd` → open Command Prompt
    - **Mac:** Spotlight (`Cmd+Space`) → type `terminal` → open Terminal
   
