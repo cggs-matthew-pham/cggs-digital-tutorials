@@ -65,7 +65,7 @@ Works on Windows and Mac — steps that differ are labelled.
 
 ## 3. Download the repo as a ZIP (no Git needed)
 
-1. Go to the repo's GitHub page.
+1. Go to the repo's GitHub page: https://github.com/cggs-matthew-pham/pattern-detector-starters 
 2. Click the green **`< > Code`** button.
 3. Click **Download ZIP**.
 4. Find the downloaded file (usually in your **Downloads** folder) and
