@@ -99,7 +99,8 @@ class ImageClassifier:
         history = self.model.fit(
             self.train_data,
             validation_data=self.validation_data,
-            epochs=epochs
+            epochs=epochs,
+            shuffle=False
         )
 
         return history
